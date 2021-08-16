@@ -1,0 +1,21 @@
+.card-type {
+  background-size: cover;
+  background-position: center;
+  height: 330px;
+  width: 330px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 7px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  position: relative;
+  margin-bottom: 30px;
+}
+
+.card-type h1 {
+  position: absolute;
+  bottom: -33px;
+  left: 0;
+  color: black;
+  font-size: 17px;
+}

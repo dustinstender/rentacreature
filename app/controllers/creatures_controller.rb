@@ -16,10 +16,10 @@ class CreaturesController < ApplicationController
   #   end
   # end
 
-  # private
+  private
 
-  # def creature_params
-  #   params.require(:creature).permit(:name, :type, :address, :power, :age, :photo, :description, :price_per_day)
-  # end
+  def creature_params
+    params.require(:creature).permit(:name, :type, :address, :power, :age, :photo, :description, :price_per_day)
+  end
 
 end

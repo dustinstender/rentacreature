@@ -1,11 +1,12 @@
 class BookingsController < ApplicationController
-  def new
-    @creature = Creature.find(params[:creature_id])
-    @booking = Booking.new
-  end
 
   def show
     @creature = Creature.find(params[:id])
+  end
+
+  def new
+    @creature = Creature.find(params[:creature_id])
+    @booking = Booking.new
   end
 
   def create
@@ -29,7 +30,7 @@ class BookingsController < ApplicationController
   private
 
   def booking_params
-    params.require(:booking).permit(:start_date, :end_start, :price)
-    
+    params.require(:booking).permit(:start_date, :end_date, :price)
+
   end
 end

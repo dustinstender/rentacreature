@@ -2,117 +2,130 @@
 <%# CARD TYPE %>
 
 <div class="container">
-  <div class="cards">
-    <%= link_to root_path do %>
-      <div class="card-type" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://source.unsplash.com/random)">
-        <h1>Dragons</h1>
-      </div>
-    <% end %>
-    <%= link_to root_path do %>
-      <div class="card-type" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://source.unsplash.com/random)">
-        <h1>Goddesses & Gods</h1>
-      </div>
-    <% end %>
-    <%= link_to root_path do %>
-      <div class="card-type" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://source.unsplash.com/random)">
-        <h1>Gobelins</h1>
-      </div>
-    <% end %>
-    <%= link_to root_path do %>
-      <div class="card-type" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://source.unsplash.com/random)">
-        <h1>Wizards & Witches</h1>
-      </div>
-    <% end %>
+
+  <div class="category mb-4">
+    <h2 class="my-4">Discover new powers</h2>
+    <div class="cards">
+      <%= link_to root_path do %>
+        <div class="card-power">
+          <%= image_tag "flying.jpg" %>
+          <div class="card-product-infos">
+            <h2>Fly</h2>
+            <p>Go abroad on the <strong>comfiest creatures</strong></p>
+          </div>
+        </div>
+      <% end %>
+      <%= link_to root_path do %>
+        <div class="card-power">
+          <%= image_tag "demon.jpg" %>
+          <div class="card-product-infos">
+            <h2>Dark powers</h2>
+            <p>Curse your <strong>worst enemy</strong> with the help of our demons</p>
+          </div>
+        </div>
+      <% end %>
+      <%= link_to root_path do %>
+        <div class="card-power">
+          <%= image_tag "magic.jpg" %>
+          <div class="card-product-infos">
+            <h2>Magic</h2>
+            <p>Learn <strong>tricks</strong> with the host of your choice</p>
+          </div>
+        </div>
+      <% end %>
+      <%= link_to root_path do %>
+        <div class="card-power">
+          <%= image_tag "wizard.jpg" %>
+          <div class="card-product-infos">
+            <h2>Wichcraft</h2>
+            <p>Become <strong>Harry Potter </strong>for a day</p>
+          </div>
+        </div>
+      <% end %>
+    </div>
   </div>
 
-  <%# CARD POWER %>
-
-  <div class="cards">
-    <%= link_to root_path do %>
-      <div class="card-power">
-        <img src="https://source.unsplash.com/random" />
-        <div class="card-product-infos">
-          <h2>Power </h2>
-          <p>Power description with <strong>relevant info</strong></p>
+  <div class="category my-4">
+    <h2 class="my-4">Meet our friendliest creatures</h2>
+    <div class="cards">
+      <%= link_to root_path do %>
+        <div class="card-type" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://source.unsplash.com/random)">
+          <h1>Dragons</h1>
         </div>
-      </div>
-    <% end %>
-    <%= link_to root_path do %>
-      <div class="card-power">
-        <img src="https://source.unsplash.com/random" />
-        <div class="card-product-infos">
-          <h2>Power </h2>
-          <p>Power description with <strong>relevant info</strong></p>
+      <% end %>
+      <%= link_to root_path do %>
+        <div class="card-type" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://source.unsplash.com/random)">
+          <h1>Goddesses & Gods</h1>
         </div>
-      </div>
-    <% end %>
-    <%= link_to root_path do %>
-      <div class="card-power">
-        <img src="https://source.unsplash.com/random" />
-        <div class="card-product-infos">
-          <h2>Power </h2>
-          <p>Power description with <strong>relevant info</strong></p>
+      <% end %>
+      <%= link_to root_path do %>
+        <div class="card-type" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://source.unsplash.com/random)">
+          <h1>Gobelins</h1>
         </div>
-      </div>
-    <% end %>
-    <%= link_to root_path do %>
-      <div class="card-power">
-        <img src="https://source.unsplash.com/random" />
-        <div class="card-product-infos">
-          <h2>Power </h2>
-          <p>Power description with <strong>relevant info</strong></p>
+      <% end %>
+      <%= link_to root_path do %>
+        <div class="card-type" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://source.unsplash.com/random)">
+          <h1>Wizards & Witches</h1>
         </div>
-      </div>
-    <% end %>
+      <% end %>
+    </div>
   </div>
 
+  <div>
+    <div class="big-card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://source.unsplash.com/random)">
+      <h1 class="my-3">Book your next experience now</h1>
+      <button class="btn btn-light"><%= link_to "Sign up Now", root_path %></button>
+    </div>
+  </div>
   <%# <%= CARD CREATURE %>
 
-  <div class="cards">
-    <%= link_to root_path do %>
-      <div class="card-creature">
-      <img src="https://source.unsplash.com/random" alt="">
-        <h1>Marly the dragon</h1>
-        <p>Hi guys! I'm a friendly dragon that loves to takes friendly people on vacation. I'm super fast and comfy</p>
-        <div class="card-bottom">
-          <h1>4,6 ⭐️</h1>
-          <h1>65$ <small>per day</small></h1>
+  <div class="category my-4">
+  <h2 class="my-4">Our best recommandations now</h2>
+    <div class="cards">
+      <%= link_to root_path do %>
+        <div class="card-creature">
+        <img src="https://source.unsplash.com/random" alt="">
+          <h1>Marly the dragon</h1>
+          <p>Hi guys! I'm a friendly dragon that loves to takes friendly people on vacation. I'm super fast and comfy</p>
+          <div class="card-bottom">
+            <h1>4,6 ⭐️</h1>
+            <h1>65$ <small>per day</small></h1>
+          </div>
         </div>
-      </div>
-    <% end %>
-    <%= link_to root_path do %>
-      <div class="card-creature">
-      <img src="https://source.unsplash.com/random" alt="">
-        <h1>Quentin the gobelin</h1>
-        <p>Not really friendly, just here in case you're bored</p>
-        <div class="card-bottom">
-          <h1>3,5 ⭐️</h1>
-          <h1>150$ <small>per day</small></h1>
+      <% end %>
+      <%= link_to root_path do %>
+        <div class="card-creature">
+        <img src="https://source.unsplash.com/random" alt="">
+          <h1>Quentin the gobelin</h1>
+          <p>Not really friendly, just here in case you're bored</p>
+          <div class="card-bottom">
+            <h1>3,5 ⭐️</h1>
+            <h1>150$ <small>per day</small></h1>
+          </div>
         </div>
-      </div>
-    <% end %>
-    <%= link_to root_path do %>
-      <div class="card-creature">
-      <img src="https://source.unsplash.com/random" alt="">
-        <h1>Dustin the Wizard</h1>
-        <p>I love children so don't hesitate to call me for borthday parties</p>
-        <div class="card-bottom">
-          <h1>4,9 ⭐️</h1>
-          <h1>94$ <small>per day</small></h1>
+      <% end %>
+      <%= link_to root_path do %>
+        <div class="card-creature">
+        <img src="https://source.unsplash.com/random" alt="">
+          <h1>Dustin the Wizard</h1>
+          <p>I love children so don't hesitate to call me for borthday parties</p>
+          <div class="card-bottom">
+            <h1>4,9 ⭐️</h1>
+            <h1>94$ <small>per day</small></h1>
+          </div>
         </div>
-      </div>
-    <% end %>
-    <%= link_to root_path do %>
-      <div class="card-creature">
-      <img src="https://source.unsplash.com/random" alt="">
-        <h1>Carole the unicorn</h1>
-        <p>Hello, I live in the coutryside and love outdoors so call be if you want to go on a hive of something</p>
-        <div class="card-bottom">
-          <h1>2,6 ⭐️</h1>
-          <h1>45$ <small>per day</small></h1>
+      <% end %>
+      <%= link_to root_path do %>
+        <div class="card-creature">
+        <img src="https://source.unsplash.com/random" alt="">
+          <h1>Carole the unicorn</h1>
+          <p>Hello, I live in the coutryside and love outdoors so call be if you want to go on a hive of something</p>
+          <div class="card-bottom">
+            <h1>2,6 ⭐️</h1>
+            <h1>45$ <small>per day</small></h1>
+          </div>
         </div>
-      </div>
-    <% end %>
+      <% end %>
+    </div>
   </div>
 </div>
-

@@ -1,2 +1,116 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<%# CARD TYPE %>
+
+<div class="container">
+  <div class="cards">
+    <%= link_to root_path do %>
+      <div class="card-type" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://source.unsplash.com/random)">
+        <h1>Dragons</h1>
+      </div>
+    <% end %>
+    <%= link_to root_path do %>
+      <div class="card-type" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://source.unsplash.com/random)">
+        <h1>Goddesses & Gods</h1>
+      </div>
+    <% end %>
+    <%= link_to root_path do %>
+      <div class="card-type" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://source.unsplash.com/random)">
+        <h1>Gobelins</h1>
+      </div>
+    <% end %>
+    <%= link_to root_path do %>
+      <div class="card-type" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://source.unsplash.com/random)">
+        <h1>Wizards & Witches</h1>
+      </div>
+    <% end %>
+  </div>
+
+  <%# CARD POWER %>
+
+  <div class="cards">
+    <%= link_to root_path do %>
+      <div class="card-power">
+        <img src="https://source.unsplash.com/random" />
+        <div class="card-product-infos">
+          <h2>Power </h2>
+          <p>Power description with <strong>relevant info</strong></p>
+        </div>
+      </div>
+    <% end %>
+    <%= link_to root_path do %>
+      <div class="card-power">
+        <img src="https://source.unsplash.com/random" />
+        <div class="card-product-infos">
+          <h2>Power </h2>
+          <p>Power description with <strong>relevant info</strong></p>
+        </div>
+      </div>
+    <% end %>
+    <%= link_to root_path do %>
+      <div class="card-power">
+        <img src="https://source.unsplash.com/random" />
+        <div class="card-product-infos">
+          <h2>Power </h2>
+          <p>Power description with <strong>relevant info</strong></p>
+        </div>
+      </div>
+    <% end %>
+    <%= link_to root_path do %>
+      <div class="card-power">
+        <img src="https://source.unsplash.com/random" />
+        <div class="card-product-infos">
+          <h2>Power </h2>
+          <p>Power description with <strong>relevant info</strong></p>
+        </div>
+      </div>
+    <% end %>
+  </div>
+
+  <%# <%= CARD CREATURE %>
+
+  <div class="cards">
+    <%= link_to root_path do %>
+      <div class="card-creature">
+      <img src="https://source.unsplash.com/random" alt="">
+        <h1>Marly the dragon</h1>
+        <p>Hi guys! I'm a friendly dragon that loves to takes friendly people on vacation. I'm super fast and comfy</p>
+        <div class="card-bottom">
+          <h1>4,6 ⭐️</h1>
+          <h1>65$ <small>per day</small></h1>
+        </div>
+      </div>
+    <% end %>
+    <%= link_to root_path do %>
+      <div class="card-creature">
+      <img src="https://source.unsplash.com/random" alt="">
+        <h1>Quentin the gobelin</h1>
+        <p>Not really friendly, just here in case you're bored</p>
+        <div class="card-bottom">
+          <h1>3,5 ⭐️</h1>
+          <h1>150$ <small>per day</small></h1>
+        </div>
+      </div>
+    <% end %>
+    <%= link_to root_path do %>
+      <div class="card-creature">
+      <img src="https://source.unsplash.com/random" alt="">
+        <h1>Dustin the Wizard</h1>
+        <p>I love children so don't hesitate to call me for borthday parties</p>
+        <div class="card-bottom">
+          <h1>4,9 ⭐️</h1>
+          <h1>94$ <small>per day</small></h1>
+        </div>
+      </div>
+    <% end %>
+    <%= link_to root_path do %>
+      <div class="card-creature">
+      <img src="https://source.unsplash.com/random" alt="">
+        <h1>Carole the unicorn</h1>
+        <p>Hello, I live in the coutryside and love outdoors so call be if you want to go on a hive of something</p>
+        <div class="card-bottom">
+          <h1>2,6 ⭐️</h1>
+          <h1>45$ <small>per day</small></h1>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>

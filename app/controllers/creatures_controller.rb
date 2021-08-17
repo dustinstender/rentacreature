@@ -1,6 +1,6 @@
 class CreaturesController < ApplicationController
   def index
-    @creature = policy_scope(Creature).order(created_at: :desc)
+    @creatures = policy_scope(Creature).order(created_at: :desc)
   end
 
   def show

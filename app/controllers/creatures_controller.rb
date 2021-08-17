@@ -1,10 +1,11 @@
 class CreaturesController < ApplicationController
   def index
-    @creatures = Creature.all
+    @creature = policy_scope(Creature).order(created_at: :desc)
   end
 
   def show
     @creature = Creature.find(params[:creature_id])
+    authorize @creature
   end
 
   # def create

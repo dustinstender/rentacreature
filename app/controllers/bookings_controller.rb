@@ -1,12 +1,17 @@
 class BookingsController < ApplicationController
+  def index
+    @booking = policy_scope(Booking).order(created_at: :desc)
+  end
 
   def show
+    authorize @booking
     @creature = Creature.find(params[:id])
   end
 
   def new
     @creature = Creature.find(params[:creature_id])
     @booking = Booking.new
+    authorize @booking
   end
 
   def create
@@ -21,6 +26,7 @@ class BookingsController < ApplicationController
   end
 
   def destroy
+    authorize @booking
     @booking = Booking.find(params[:id])
     @creature = @booking.creature
     @booking.destroy
@@ -30,7 +36,7 @@ class BookingsController < ApplicationController
   private
 
   def booking_params
+    authorize @booking
     params.require(:booking).permit(:start_date, :end_date, :price)
-
   end
 end

@@ -1,2 +1,16 @@
-<h1>Creatures#show</h1>
-<p>Find me in app/views/creatures/show.html.erb</p>
+<div class="page">
+    <div class="category my-4">
+        <%= link_to root_path do %>
+            <div class="card-creature card-big">
+                <h1><%=@creature.name%> <%=@creature.address%></h1>
+                <img src="https://source.unsplash.com/random" alt="">
+                <h1><%=@creature.name%> the <%=@creature.species%></h1>
+                <p><%=@creature.description%></p>
+            </div>
+        <% end %>
+        <div class="card-bottom">
+            <p>2,6 ⭐️</p> 
+            <p>45$ per day</p>
+        </div>
+    </div>
+</div>

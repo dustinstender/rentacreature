@@ -4,7 +4,7 @@ class CreaturesController < ApplicationController
   end
 
   def show
-    @creature = Creature.find(params[:creature_id])
+    @creature = Creature.find(params[:id])
     authorize @creature
   end
 

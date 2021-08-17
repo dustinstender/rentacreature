@@ -1,6 +1,6 @@
 class BookingsController < ApplicationController
   def index
-    @booking = policy_scope(Booking).order(created_at: :desc)
+    @bookings = policy_scope(Booking).order(created_at: :desc)
   end
 
   def show

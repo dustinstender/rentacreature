@@ -8,4 +8,12 @@ class CreaturePolicy < ApplicationPolicy
   def show?
     true
   end
+
+  def search?
+    true
+  end
+
+  def search_species?
+    true
+  end
 end

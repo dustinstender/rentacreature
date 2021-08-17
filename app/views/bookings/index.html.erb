@@ -1,11 +1,20 @@
 <div class="page">
   <h1>Your bookings</h1>
+
   <ul>
     <% @bookings.each do |booking| %>
-      <li> <%= booking.start_date %>
-            <%= booking.end_date %>
-      </li>
-      <%=  %>
+    <div class="booking-cards">
+        <div class="card-product">
+          <img src="https://source.unsplash.com/random" />
+          <div class="card-product-infos">
+            <h2><%= booking.creature.name %></h2>
+            <p>You are staying for <%= (booking.end_date - booking.start_date) %> days.</p>
+          </div>
+          <%= link_to "Delete", "#", class: "btn btn-ghost booking-delete" %>
+        </div>
+
+      </div>
     <% end %>
   </ul>
+
 </div>

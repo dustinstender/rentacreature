@@ -1,13 +1,11 @@
-  <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
+<% if user_signed_in? %>
+<div class="navbar sticky-top navbar-expand-sm navbar-light navbar-lewagon">
     <%= link_to "#", class: "navbar-brand" do %>
       <%= image_tag "monster-logo.png" %> RentCreatures
     <% end %>
-
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-
-
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav mr-auto">
         <li class="nav-item active">
@@ -26,3 +24,26 @@
       </ul>
     </div>
   </div>
+<% else %>
+  <div class="navbar sticky-top navbar-expand-sm navbar-light navbar-lewagon">
+    <%= link_to "#", class: "navbar-brand" do %>
+      <%= image_tag "monster-logo.png" %> RentCreatures
+    <% end %>
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <%= link_to "Creatures", "creatures_index_path", class: "nav-link" %>
+        </li>
+        <li class="nav-item">
+          <%= link_to "Sign In", "new_user_session_path", class: "nav-link" %>
+        </li>
+      </ul>
+    </div>
+  </div>
+<% end %>

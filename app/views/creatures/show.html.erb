@@ -1,2 +1,26 @@
-<h1>Creatures#show</h1>
-<p>Find me in app/views/creatures/show.html.erb</p>
+
+
+  <h2 class="my-4"><%= @creature.name %></h2>
+
+
+  <div class="bootstrap-iso">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-6 col-sm-6 col-xs-12">
+          <form method="post">
+            <div class="form-group"> <!-- start Date input -->
+              <label class="control-label" for="date">Start rent</label>
+              <input class="form-control" id="date" name="date" placeholder="MM/DD/YYY" type="text"/>
+            </div>
+            <div class="form-group"> <!-- End Date input -->
+              <label class="control-label" for="date">End rent</label>
+              <input class="form-control" id="date" name="date" placeholder="MM/DD/YYY" type="text"/>
+            </div>
+            <div class="form-group"> <!-- Submit button -->
+              <button link_to  bookings_path class="btn btn-primary " name="submit" type="submit">Submit</button>
+            </div>
+          </form>
+      </div>
+    </div>
+  </div>
+</div>

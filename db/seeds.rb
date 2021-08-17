@@ -4,20 +4,20 @@ Booking.destroy_all
 
 puts "creating users..."
 owner = User.create!(name: 'David', description: "Hi I'm an owner", email: "owner@gmail.com", password: "123456")
-customer = User.create!(name:'Lea', description:"Hi I'm an customer", email:"customer@gmail.com", password: "123456")
+User.create!(name:'Lea', description:"Hi I'm an customer", email:"customer@gmail.com", password: "123456")
 
 puts "Creating creature..."
 
 power = ['good-luck', 'flying', 'dark-power', 'magic']
-Creature.create!([{ name: "marly",
-                    species: "Elfe",
+Creature.create!([{ name: "Marly",
+                    species: "elf",
                     age: 300,
                     address: "12 Rue de Lourmel, 75015 Paris",
                     power: power.sample,
                     description: "I am the best creature ever existed in that world and really funny!",
                     price_per_day: 150.0,
                     user: owner },
-                  { name: "carole",
+                  { name: "Carole",
                     species: "unicorn",
                     age: 900,
                     address: "10 Rue Sextius Michel, 75015 Paris",
@@ -25,7 +25,7 @@ Creature.create!([{ name: "marly",
                     description: "I am attractiv and understanble",
                     price_per_day: 150.5,
                     user: owner },
-                  { name: "dustin",
+                  { name: "Dustin",
                     species: "dragon",
                     age: 1000,
                     address: "15 St Ambroise, 75011 Paris",
@@ -33,7 +33,7 @@ Creature.create!([{ name: "marly",
                     description: "I am stronger and sinister for every other creature",
                     price_per_day: 500.0,
                     user: owner },
-                  { name: "quentin",
+                  { name: "Quentin",
                     species: "burrow fisher",
                     age: 300,
                     address: "14 Rue Saint-Ambroise,75011 Paris",

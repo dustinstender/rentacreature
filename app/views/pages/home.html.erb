@@ -1,5 +1,4 @@
 
-<%# CARD TYPE %>
 <%= render "pages/banner" %>
 
 <div class="page">
@@ -48,39 +47,40 @@
 
   <div class="category my-4">
     <h2 class="my-4">Meet our friendliest creatures</h2>
-    <div class="cards">
-      <%= link_to creatures_shsp_path(species: "dragon") do %>
-        <div class="card-type" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://source.unsplash.com/random)">
-          <h1>Dragons</h1>
-        </div>
-      <% end %>
-      <%= link_to creatures_shsp_path(species: "elf") do %>
-        <div class="card-type" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://source.unsplash.com/random)">
-          <h1>Elves</h1>
-        </div>
-      <% end %>
-      <%= link_to creatures_shsp_path(species: "demon") do %>
-        <div class="card-type" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://source.unsplash.com/random)">
-          <h1>Demons</h1>
-        </div>
-      <% end %>
-      <%= link_to creatures_shsp_path(species: "wizard") do %>
-        <div class="card-type" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://source.unsplash.com/random)">
-          <h1>Wizards & Witches</h1>
-        </div>
-      <% end %>
-    </div>
+      <div class="cards">
+        <%= link_to creatures_shsp_path(species: "dragon") do %>
+          <div class="card-type" style="background-image: url(<%= image_path('dragon.jpg') %>)">
+            <h1>Dragons</h1>
+          </div>
+        <% end %>
+        <%= link_to creatures_shsp_path(species: "elf") do %>
+          <div class="card-type" style="background-image: url(<%= image_path('elf.jpg') %>)">
+            <h1>Elves</h1>
+          </div>
+        <% end %>
+        <%= link_to creatures_shsp_path(species: "demon") do %>
+          <div class="card-type" style="background-image: url(<%= image_path('evil.jpg') %>)">
+            <h1>Demons</h1>
+          </div>
+        <% end %>
+        <%= link_to creatures_shsp_path(species: "wizard") do %>
+          <div class="card-type" style="background-image: url(<%= image_path('wand.jpg') %>)">
+            <h1>Wizards & Witches</h1>
+          </div>
+        <% end %>
+      </div>
   </div>
+</div>
 
   <div class="big-card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://source.unsplash.com/random)">
     <h1 class="my-3">Book your next experience now</h1>
     <button class="btn btn-light"><a href="users/sign_up">Sign up Now</a></button>
   </div>
+</div>
 
-  <%# <%= CARD CREATURE %>
-
+<div class="page">
   <div class="category my-4">
-  <h2 class="my-4">Our best recommandations now</h2>
+    <h2 class="my-4">Our best recommandations now</h2>
     <div class="cards">
       <%= link_to root_path do %>
         <div class="card-creature">

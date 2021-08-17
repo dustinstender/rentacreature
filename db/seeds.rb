@@ -1,10 +1,11 @@
 puts "Emptying DB"
-User.destroy_all
 Booking.destroy_all
+User.destroy_all
+Creature.destroy_all
 
 puts "creating users..."
 owner = User.create!(name: 'David', description: "Hi I'm an owner", email: "owner@gmail.com", password: "123456")
-User.create!(name:'Lea', description:"Hi I'm an customer", email:"customer@gmail.com", password: "123456")
+customer = User.create!(name:'Lea', description:"Hi I'm an customer", email:"customer@gmail.com", password: "123456")
 
 puts "Creating creature..."
 
@@ -153,3 +154,9 @@ Creature.create!([{ name: "Marly",
                     description: "Hi I'm a super friendly creature and i'd be more than happy for spend time with you",
                     price_per_day: 28,
                     user: owner }])
+
+Booking.create!({   start_date: '03/09/2021',
+                    end_date: '06/09/2021',
+                    price: 85.99,
+                    user: customer,
+                    creature: Creature.first })

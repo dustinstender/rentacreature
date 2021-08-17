@@ -75,11 +75,13 @@
 }
 
 .search-button {
-  display: inline-block;
+  display: flex;
   flex-grow: 1;
   height: 70px;
   line-height: 80px;
   padding: 0 2em;
+  justify-content: center;
+  align-items: center;
   text-align: center;
   font-size: 1.2em;
   font-weight: 100;

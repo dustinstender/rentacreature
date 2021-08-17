@@ -7,7 +7,7 @@
   <div class="category my-4">
     <h2 class="my-4">Discover new powers</h2>
     <div class="cards">
-      <%= link_to root_path do %>
+      <%= link_to creatures_search_path(power: "flying") do %>
         <div class="card-power">
           <%= image_tag "flying.jpg" %>
           <div class="card-product-infos">
@@ -16,7 +16,7 @@
           </div>
         </div>
       <% end %>
-      <%= link_to root_path do %>
+      <%= link_to creatures_search_path(power: "dark-power") do %>
         <div class="card-power">
           <%= image_tag "demon.jpg" %>
           <div class="card-product-infos">
@@ -25,16 +25,16 @@
           </div>
         </div>
       <% end %>
-      <%= link_to root_path do %>
+      <%= link_to creatures_search_path(power: "good-luck") do %>
         <div class="card-power">
           <%= image_tag "magic.jpg" %>
           <div class="card-product-infos">
-            <h2>Magic</h2>
-            <p>Learn <strong>tricks</strong> with the host of your choice</p>
+            <h2>Luck</h2>
+            <p>Get the <strong>best luck</strong> for your projects</p>
           </div>
         </div>
       <% end %>
-      <%= link_to root_path do %>
+      <%= link_to creatures_search_path(power: "magic") do %>
         <div class="card-power">
           <%= image_tag "wizard.jpg" %>
           <div class="card-product-infos">
@@ -49,22 +49,22 @@
   <div class="category my-4">
     <h2 class="my-4">Meet our friendliest creatures</h2>
     <div class="cards">
-      <%= link_to root_path do %>
+      <%= link_to creatures_shsp_path(species: "dragon") do %>
         <div class="card-type" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://source.unsplash.com/random)">
           <h1>Dragons</h1>
         </div>
       <% end %>
-      <%= link_to root_path do %>
+      <%= link_to creatures_shsp_path(species: "elf") do %>
         <div class="card-type" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://source.unsplash.com/random)">
-          <h1>Goddesses & Gods</h1>
+          <h1>Elves</h1>
         </div>
       <% end %>
-      <%= link_to root_path do %>
+      <%= link_to creatures_shsp_path(species: "demon") do %>
         <div class="card-type" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://source.unsplash.com/random)">
-          <h1>Gobelins</h1>
+          <h1>Demons</h1>
         </div>
       <% end %>
-      <%= link_to root_path do %>
+      <%= link_to creatures_shsp_path(species: "wizard") do %>
         <div class="card-type" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://source.unsplash.com/random)">
           <h1>Wizards & Witches</h1>
         </div>
@@ -74,7 +74,7 @@
 
   <div class="big-card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://source.unsplash.com/random)">
     <h1 class="my-3">Book your next experience now</h1>
-    <button class="btn btn-light"><%= link_to "Sign up Now", root_path %></button>
+    <button class="btn btn-light"><%= link_to "Sign up Now", new_user_registration_path %></button>
   </div>
 
   <%# <%= CARD CREATURE %>

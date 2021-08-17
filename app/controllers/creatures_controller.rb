@@ -8,6 +8,16 @@ class CreaturesController < ApplicationController
     authorize @creature
   end
 
+  def search
+    @creatures = Creature.where(power: params[:power])
+    authorize @creatures
+  end
+
+  def search_species
+    @creatures = Creature.where(species: params[:species])
+    authorize @creatures
+  end
+
   # def create
   #   @creature = Creature.new(creature_params)
   #   if @creature.save

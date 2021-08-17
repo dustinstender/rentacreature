@@ -1,0 +1,33 @@
+.card-creature {
+  width: 310px;
+  border-radius: 7px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.07);
+  position: relative;
+  margin-bottom: 30px;
+  padding: 10px;
+  background-color: rgba($color: #000000, $alpha: 0.0);
+}
+
+.card-creature img {
+  width: 100%;
+  height: 310px;
+  object-fit: cover;
+  padding-bottom: 10px;
+  overflow: hidden;
+}
+
+.card-creature h1 {
+  color: black;
+  font-size: 17px;
+}
+
+.card-creature p {
+  color: black;
+  font-size: 12px;
+  height: 50px;
+}
+
+.card-creature .card-bottom {
+  display: flex;
+  justify-content: space-between;
+}

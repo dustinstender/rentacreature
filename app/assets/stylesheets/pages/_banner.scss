@@ -97,3 +97,10 @@
   background-color: HSLA(345, 100%, 60%, 1.00);
   color: white;
 }
+
+@media (max-width:1000px){
+        .container-banner {
+        margin: 0px auto;
+        width: 600px;
+}
+}

@@ -3,7 +3,7 @@
 <div class="category my-4">
 <div class="cards">
 <% @creatures.each do |creature| %>
-    <%= link_to root_path do %>
+    <%= link_to creature_path(creature) do %>
       <div class="card-creature">
       <img src="https://source.unsplash.com/random" alt="">
         <h1> <%= creature.name %> </h1>

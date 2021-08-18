@@ -2,10 +2,10 @@ class CreaturesController < ApplicationController
   def index
     @creatures = policy_scope(Creature).order(created_at: :desc)
 
-    @markers = @flats.geocoded.map do |flat|
+    @markers = @creatures.geocoded.map do |creature|
       {
-        lat: flat.latitude,
-        lng: flat.longitude
+        lat: creature.latitude,
+        lng: creature.longitude
       }
     end
   end

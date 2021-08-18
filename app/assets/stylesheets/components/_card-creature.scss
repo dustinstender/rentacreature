@@ -31,3 +31,17 @@
   display: flex;
   justify-content: space-between;
 }
+
+.card-bottom {
+  display: flex;
+  justify-content: space-between;
+}
+.card-big {
+  width: 500px;
+}
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-evenly;
+}

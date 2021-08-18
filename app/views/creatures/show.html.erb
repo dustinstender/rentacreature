@@ -1,26 +1,40 @@
-
-
-  <h2 class="my-4"><%= @creature.name %></h2>
-
-
-  <div class="bootstrap-iso">
-    <div class="container-fluid">
-      <div class="row">
-        <div class="col-md-6 col-sm-6 col-xs-12">
-          <form method="post">
-            <div class="form-group"> <!-- start Date input -->
-              <label class="control-label" for="date">Start rent</label>
-              <input class="form-control" id="date" name="date" placeholder="MM/DD/YYY" type="text"/>
+<div class="page">
+    <div class="container">
+        <div class="category my-4">
+            <%= link_to root_path do %>
+                <div class="card-creature card-big">
+                    <h1><%=@creature.name%> <%=@creature.address%></h1>
+                    <img src="https://source.unsplash.com/random" alt="">
+                    <h1><%=@creature.name%> the <%=@creature.species%></h1>
+                    <p><%=@creature.description%></p>
+                <div class="card-bottom">
+                    <p>2,6 ⭐️</p> 
+                    <p>45$ per day</p>
+                </div>
+                </div>   
+            <% end %>
+        </div>
+        <div class="bootstrap-iso">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-6 col-sm-6 col-xs-12">
+                        <form method="post">
+                            <div class="form-group"> <!-- start Date input -->
+                                <label class="control-label" for="date">Start rent</label>
+                                <input class="form-control" id="date" name="date" placeholder="MM/DD/YYY" type="text"/>
+                            </div>
+                            <div class="form-group"> <!-- End Date input -->
+                                <label class="control-label" for="date">End rent</label>
+                                <input class="form-control" id="date" name="date" placeholder="MM/DD/YYY" type="text"/>
+                            </div>
+                            <div class="form-group"> <!-- Submit button -->
+                                <button link_to  bookings_path class="btn btn-primary " name="submit" type="submit">Submit</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
             </div>
-            <div class="form-group"> <!-- End Date input -->
-              <label class="control-label" for="date">End rent</label>
-              <input class="form-control" id="date" name="date" placeholder="MM/DD/YYY" type="text"/>
-            </div>
-            <div class="form-group"> <!-- Submit button -->
-              <button link_to  bookings_path class="btn btn-primary " name="submit" type="submit">Submit</button>
-            </div>
-          </form>
-      </div>
+        </div>
     </div>
-  </div>
 </div>
+

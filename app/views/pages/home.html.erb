@@ -87,7 +87,7 @@
         <%= link_to creature_path(creature) do %>
           <div class="card-creature">
             <% if creature.profile_pic != nil %>
-              <img src="<%= image_path(creature.profile_pic) %>" alt="">
+              <%= image_tag creature.profile_pic %>
             <% else %>
                <%= image_tag "monster-logo.png" %>
             <% end %>

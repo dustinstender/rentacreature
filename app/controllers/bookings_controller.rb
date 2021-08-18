@@ -18,6 +18,7 @@ class BookingsController < ApplicationController
     @booking = Booking.new(booking_params)
     @creature = Creature.find(params[:creature_id])
     @booking.creature = @creature
+    authorize @booking
     if @booking.save
       redirect_to bookings_path
     else
@@ -36,8 +37,6 @@ class BookingsController < ApplicationController
   private
 
   def booking_params
-
-    authorize @booking
     params.require(:booking).permit(:start_date, :end_date, :price)
 
   end

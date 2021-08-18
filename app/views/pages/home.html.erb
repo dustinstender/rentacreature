@@ -82,7 +82,7 @@
   <div class="category my-4">
     <h2 class="my-4">Our best recommandations now</h2>
     <div class="cards">
-      <%= link_to controller: "creatures", action: "show", id: 102 do %>
+       <%= link_to root_path do %>
         <div class="card-creature">
         <img src="<%= image_path('elf-profile.jpeg') %>" alt="">
           <h1>Marly the Elf</h1>
@@ -129,3 +129,13 @@
     </div>
   </div>
 </div>
+
+
+<% @sample_creature.each do |creature| %>
+
+  <%= link_to creature_path(creature) do %>
+    <%= creature.name %>
+    <%= creature. %>
+    <%= creature.name %>
+  <% end %>
+<% end %>

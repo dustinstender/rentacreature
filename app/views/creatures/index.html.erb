@@ -1,6 +1,8 @@
-<div class="page">
-<h1>Browse our magical creatures</h1>
-<div class="category my-4">
+ <div class="page">
+ <h1>Browse our magical creatures</h1>
+ <div class="row">
+    <div class="col">
+      <div class="category my-4">
 <div class="cards">
 <% @creatures.each do |creature| %>
     <%= link_to creature_path(creature) do %>
@@ -18,3 +20,11 @@
   </div>
 </div>
 </div>
+    </div>
+    <div class="col">
+      <div id="map"
+     style="width: 100%; height: 600px;"
+     data-markers="<%= @markers.to_json %>"
+     data-mapbox-api-key="<%= ENV['pk.eyJ1IjoicXBlc2NoYXJkIiwiYSI6ImNrcnFidThmcjF5YWcybmw3ZmRncGZrY3EifQ.uogzLbF8PdxEDQ6BXjQnYg'] %>"></div>
+    </div>
+  </div>

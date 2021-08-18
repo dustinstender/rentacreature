@@ -1,6 +1,13 @@
 class CreaturesController < ApplicationController
   def index
     @creatures = policy_scope(Creature).order(created_at: :desc)
+
+    @markers = @flats.geocoded.map do |flat|
+      {
+        lat: flat.latitude,
+        lng: flat.longitude
+      }
+    end
   end
 
   def show
@@ -17,15 +24,6 @@ class CreaturesController < ApplicationController
     @creatures = Creature.where(species: params[:species])
     authorize @creatures
   end
-
-  # def create
-  #   @creature = Creature.new(creature_params)
-  #   if @creature.save
-  #     redirect_to root_path(@creature)
-  #   else
-  #     render :new
-  #   end
-  # end
 
   private
 

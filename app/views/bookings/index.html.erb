@@ -4,7 +4,7 @@
     <% @bookings.each do |booking| %>
     <div class="booking-cards">
         <div class="card-product">
-          <img src="https://source.unsplash.com/random">
+          <%= image_tag booking.creature.profile_pic %>
           <div class="card-product-infos">
             <h2><%= booking.creature.name %></h2>
             <% finish = Date.parse(booking.end_date.to_s()); %>
@@ -18,5 +18,4 @@
       </div>
     <% end %>
   </ul>
-
 </div>

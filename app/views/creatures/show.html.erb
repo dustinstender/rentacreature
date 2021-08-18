@@ -4,7 +4,7 @@
             <%= link_to root_path do %>
                 <div class="card-creature card-big">
                     <h1><%=@creature.name%> <%=@creature.address%></h1>
-                    <img src="https://source.unsplash.com/random" alt="">
+                    <%= image_tag @creature.profile_pic %>
                     <h1><%=@creature.name%> the <%=@creature.species%></h1>
                     <p><%=@creature.description%></p>
                 <div class="card-bottom">

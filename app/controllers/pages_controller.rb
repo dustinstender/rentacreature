@@ -3,4 +3,8 @@ class PagesController < ApplicationController
   def home
     @sample_creature = Creature.first(4)
   end
+
+  def index
+    @creatures = Creature.all
+  end
 end

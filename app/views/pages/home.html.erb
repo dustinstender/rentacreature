@@ -78,64 +78,24 @@
   </div>
 </div>
 
+
 <div class="page">
   <div class="category my-4">
     <h2 class="my-4">Our best recommandations now</h2>
     <div class="cards">
-       <%= link_to root_path do %>
-        <div class="card-creature">
-        <img src="<%= image_path('elf-profile.jpeg') %>" alt="">
-          <h1>Marly the Elf</h1>
-          <p>Hi guys! I'm a friendly elf that loves to takes friendly people on vacation. I'm super fast and comfy</p>
-          <div class="card-bottom">
-            <h1>4,6 ⭐️</h1>
-            <h1>65$ <small>per day</small></h1>
+      <% @sample_creature.each do |creature| %>
+        <%= link_to creature_path(creature) do %>
+          <div class="card-creature">
+              <img src="<%= image_path(creature.creature.profile_pic) %>" alt="">
+              <h1> <%= creature.name %> </h1>
+              <p> <%= creature.description %> </p>
+            <div class="card-bottom">
+              <h1> <%= creature.rating %> </h1>
+              <h1> <%= creature.price_per_day %> <small>per day</small></h1>
+            </div>
           </div>
-        </div>
-      <% end %>
-      <%= link_to root_path do %>
-        <div class="card-creature">
-        <img src="<%= image_path('dragon-profile.jpeg') %>" alt="">
-          <h1>Quentin the dragon</h1>
-          <p>Not really friendly, just here in case you're bored</p>
-          <div class="card-bottom">
-            <h1>3,5 ⭐️</h1>
-            <h1>150$ <small>per day</small></h1>
-          </div>
-        </div>
-      <% end %>
-      <%= link_to root_path do %>
-        <div class="card-creature">
-        <img src="<%= image_path('demon-profile.jpeg') %>" alt="">
-          <h1>Dustin the Demon</h1>
-          <p>I love children so don't hesitate to call me for borthday parties</p>
-          <div class="card-bottom">
-            <h1>4,9 ⭐️</h1>
-            <h1>94$ <small>per day</small></h1>
-          </div>
-        </div>
-      <% end %>
-      <%= link_to root_path do %>
-        <div class="card-creature">
-        <img src="<%= image_path('witch-profile.jpeg') %>" alt="">
-          <h1>Carole the Witch</h1>
-          <p>Hello, I live in the coutryside and love outdoors so call be if you want to go on a hive of something</p>
-          <div class="card-bottom">
-            <h1>2,6 ⭐️</h1>
-            <h1>45$ <small>per day</small></h1>
-          </div>
-        </div>
-      <% end %>
+          <% end %>
+        <% end %>
     </div>
   </div>
 </div>
-
-
-<% @sample_creature.each do |creature| %>
-
-  <%= link_to creature_path(creature) do %>
-    <%= creature.name %>
-    <%= creature. %>
-    <%= creature.name %>
-  <% end %>
-<% end %>

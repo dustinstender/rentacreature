@@ -10,7 +10,8 @@
             <h2><%= booking.creature.name %></h2>
             <p>You are staying for <%= (booking.end_date - booking.start_date) %> days.</p>
           </div>
-          <%= link_to "Delete", "#", class: "btn btn-ghost booking-delete" %>
+          <%= link_to "Delete", bookings_path, method: :delete,
+            data: { confirm: "Are you sure?" }, class: "btn btn-ghost booking-delete" %>
         </div>
 
       </div>

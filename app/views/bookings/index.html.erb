@@ -1,6 +1,5 @@
 <div class="page">
   <h1>Your bookings</h1>
-
   <ul>
     <% @bookings.each do |booking| %>
     <div class="booking-cards">
@@ -8,7 +7,9 @@
           <img src="https://source.unsplash.com/random" />
           <div class="card-product-infos">
             <h2><%= booking.creature.name %></h2>
-            <p>You are staying for <%= (booking.end_date - booking.start_date) %> days.</p>
+            <% finish = Date.parse(booking.end_date.to_s()); %>
+            <% start = Date.parse(booking.start_date.to_s()); %>
+            <p>You are staying for <%= (finish - start).to_i %> days.</p>
           </div>
           <%= link_to "Delete", bookings_path, method: :delete,
             data: { confirm: "Are you sure?" }, class: "btn btn-ghost booking-delete" %>

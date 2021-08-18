@@ -18,11 +18,12 @@ class BookingsController < ApplicationController
     @booking = Booking.new(booking_params)
     @creature = Creature.find(params[:creature_id])
     @booking.creature = @creature
+    @booking.user = current_user
     authorize @booking
     if @booking.save
       redirect_to bookings_path
     else
-      render '/bookings'
+      render 'creatures/show'
     end
   end
 

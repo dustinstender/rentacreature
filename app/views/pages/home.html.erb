@@ -87,14 +87,14 @@
         <%= link_to creature_path(creature) do %>
           <div class="card-creature">
             <% if creature.profile_pic != nil %>
-              <%= image_tag creature.profile_pic %>
+            <img src="<%= image_path(creature.profile_pic) %>")>
             <% else %>
                <%= image_tag "monster-logo.png" %>
             <% end %>
               <h1> <%= creature.name %> the <%= creature.species %> </h1>
               <p> <%= creature.description %> </p>
             <div class="card-bottom">
-              <h1> <%= creature.rating %> </h1>
+              <h1> <%= creature.rating %> ⭐️ </h1>
               <h1> <%= creature.price_per_day %> <small>per day</small></h1>
             </div>
           </div>

@@ -19,9 +19,9 @@ class BookingsController < ApplicationController
     @creature = Creature.find(params[:creature_id])
     @booking.creature = @creature
     if @booking.save
-      redirect_to creature_path(@creature)
+      redirect_to bookings_path
     else
-      render :new
+      render '/bookings'
     end
   end
 

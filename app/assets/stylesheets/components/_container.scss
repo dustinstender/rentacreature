@@ -4,6 +4,7 @@
   justify-content: space-around;
   align-items: center;
   width: 100%;
+  position: relative;
 }
 
 a {
@@ -15,4 +16,8 @@ a {
 
 body {
   background-color: white;
+}
+
+.form {
+  width: 80vw;
 }

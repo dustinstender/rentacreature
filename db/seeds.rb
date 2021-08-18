@@ -1,3 +1,5 @@
+require 'open-uri'
+
 puts "Emptying DB"
 Booking.destroy_all
 User.destroy_all
@@ -8,6 +10,8 @@ owner = User.create!(name: 'David', description: "Hi I'm an owner", email: "owne
 customer = User.create!(name:'Lea', description:"Hi I'm an customer", email:"customer@gmail.com", password: "123456")
 
 puts "Creating creature..."
+#file = URI.open('')
+#article.photo.attach(io: file, filename: 'nes.png', content_type: 'image/png')
 
 power = ['good-luck', 'flying', 'dark-power', 'magic']
 Creature.create!([{ name: "Marly",
@@ -16,7 +20,7 @@ Creature.create!([{ name: "Marly",
                     address: "12 Rue de Lourmel, 75015 Paris",
                     power: power.sample,
                     rating: 4,
-                    profile_pic: 'app/assets/images/elf-profile.jpeg',
+                    profile_pic: 'https://res.cloudinary.com/creaturespic/image/upload/v1629282536/imgbin-granblue-fantasy-ifrit-final-fantasy-xiv-heavensward-art-cygames-others-89KqrhkJiPKb56YPEFAy96Puy_lwrusl.jpg',
                     description: "I am the best creature ever existed in that world and really funny!",
                     price_per_day: 150.0,
                     user: owner },

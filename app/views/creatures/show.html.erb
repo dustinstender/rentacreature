@@ -3,15 +3,15 @@
     <h2 class="ml-5">Book your experience with <%= @creature.name %></h2>
     <div class="two-columns-page">
       <div class="card-creature card-big">
-        <img src="https://source.unsplash.com/random" alt="">
-          <h1><%= @creature.name %> the <%= @creature.species %></h1>
-          <p><%= @creature.description %></p>
-          <div class="card-bottom">
-            <h1><%= @creature.rating %> ⭐️</h1>
-            <h1><%= @creature.price_per_day %>$ <small>per day</small></h1>
-          </div>
+        <%= image_tag @creature.profile_pic %>
+        <h1><%= @creature.name %> the <%= @creature.species %></h1>
+        <p><%= @creature.description %></p>
+        <div class="card-bottom">
+          <h1><%= @creature.rating %> ⭐️</h1>
+          <h1><%= @creature.price_per_day %>$ <small>per day</small></h1>
         </div>
-
+      </div>
+      <div>
         <% if policy(@booking).new? %>
           <%= simple_form_for [@creature, @booking] do |f| %>
             <%= f.input :start_date, html5: true %>
@@ -19,7 +19,7 @@
             <%= f.submit "Book", class: "btn btn-primary "  %>
           <% end %>
         <% end %>
-
+      </div>
     </div>
   </div>
 </div>

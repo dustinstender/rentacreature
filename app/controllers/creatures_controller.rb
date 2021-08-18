@@ -31,7 +31,8 @@ class CreaturesController < ApplicationController
     @markers = @creatures.geocoded.map do |creature|
       {
         lat: creature.latitude,
-        lng: creature.longitude
+        lng: creature.longitude,
+        info_window: render_to_string(partial: "info_window", locals: { creature: creature })
       }
     end
   end

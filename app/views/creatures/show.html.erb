@@ -11,19 +11,15 @@
           <h1><%= @creature.price_per_day %>$ <small>per day</small></h1>
         </div>
       </div>
-      <form style="width: 600px;" method="post">
-        <div class="form-group"> <!-- start Date input -->
-            <label class="control-label" for="date">Start rent</label>
-            <input class="form-control" id="date" name="date" placeholder="MM/DD/YYY" type="text"/>
-        </div>
-        <div class="form-group"> <!-- End Date input -->
-            <label class="control-label" for="date">End rent</label>
-            <input class="form-control" id="date" name="date" placeholder="MM/DD/YYY" type="text"/>
-        </div>
-        <div class="form-group"> <!-- Submit button -->
-            <button link_to creature_bookings_path, class="btn btn-primary " name="submit" type="submit">Submit</button>
-        </div>
-     </form>
+      <div>
+        <% if policy(@booking).new? %>
+          <%= simple_form_for [@creature, @booking] do |f| %>
+            <%= f.input :start_date, html5: true %>
+            <%= f.input :end_date , html5: true %>
+            <%= f.submit "Book", class: "btn btn-primary "  %>
+          <% end %>
+        <% end %>
+      </div>
     </div>
   </div>
 </div>

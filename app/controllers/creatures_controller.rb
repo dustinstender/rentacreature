@@ -6,6 +6,7 @@ class CreaturesController < ApplicationController
 
   def show
     @creature = Creature.find(params[:id])
+    @booking = Booking.new(creature: @creature)
     authorize @creature
   end
 

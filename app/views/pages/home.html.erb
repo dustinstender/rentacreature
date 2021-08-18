@@ -77,3 +77,29 @@
     <button class="btn btn-light"><a href="users/sign_up">Sign up Now</a></button>
   </div>
 </div>
+
+
+<div class="page">
+  <div class="category my-4">
+    <h2 class="my-4">Our best recommandations now</h2>
+    <div class="cards">
+      <% @sample_creature.each do |creature| %>
+        <%= link_to creature_path(creature) do %>
+          <div class="card-creature">
+            <% if creature.profile_pic != nil %>
+              <img src="<%= image_path(creature.profile_pic) %>" alt="">
+            <% else %>
+               <%= image_tag "monster-logo.png" %>
+            <% end %>
+              <h1> <%= creature.name %> the <%= creature.species %> </h1>
+              <p> <%= creature.description %> </p>
+            <div class="card-bottom">
+              <h1> <%= creature.rating %> </h1>
+              <h1> <%= creature.price_per_day %> <small>per day</small></h1>
+            </div>
+          </div>
+          <% end %>
+        <% end %>
+    </div>
+  </div>
+</div>

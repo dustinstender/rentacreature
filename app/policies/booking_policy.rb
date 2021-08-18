@@ -9,8 +9,12 @@ class BookingPolicy < ApplicationPolicy
     record.user == user
   end
 
+  def new?
+    record.creature.user != user
+  end
+
   def create?
-    true
+    new?
   end
 
   def destroy?

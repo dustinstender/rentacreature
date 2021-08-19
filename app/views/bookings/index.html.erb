@@ -1,4 +1,22 @@
 <div class="page">
+  <h1>Your bookings</h1>
+  <ul>
+    <% @bookings.each do |booking| %>
+    <div class="booking-cards">
+        <div class="card-product">
+        <%if booking.creature.profile_pic.attached?%>
+          <%= image_tag booking.creature.profile_pic %>
+          <div class="card-product-infos">
+            <h2><%= booking.creature.name %></h2>
+            <% finish = Date.parse(booking.end_date.to_s()); %>
+            <% start = Date.parse(booking.start_date.to_s()); %>
+            <p>You are staying for <%= (finish - start).to_i %> days.</p>
+          </div>
+          <%end%>
+          <%= link_to "Delete", bookings_path, method: :delete,
+            data: { confirm: "Are you sure?" }, class: "btn btn-ghost booking-delete" %>
+        </div>
+
   <div class="category my-4">
     <div id="dashboard">
       <h2>My dashboard</h2>
@@ -7,17 +25,19 @@
           <h4>My Creatures</h4>
           <div class="two-columns-cards">
             <% @creatures.each do |creature| %>
-              <%= link_to creature_path(creature) do %>
-                <div class="card-creature">
-                  <%= image_tag creature.profile_pic %>
-                  <h1><%= creature.name %> the <%= creature.species %></h1>
-                  <p><%= creature.description %></p>
-                  <div class="card-bottom">
-                    <h1><%= creature.rating %> ⭐️</h1>
-                    <h1><%= creature.price_per_day %>$ <small>per day</small></h1>
-                  </div>
-                </div>
-              <% end %>
+              <%if creature.profile_pic.attached?%>
+                  <%= link_to creature_path(creature) do %>
+                    <div class="card-creature">
+                      <%= image_tag creature.profile_pic %>
+                      <h1><%= creature.name %> the <%= creature.species %></h1>
+                      <p><%= creature.description %></p>
+                      <div class="card-bottom">
+                        <h1><%= creature.rating %> ⭐️</h1>
+                        <h1><%= creature.price_per_day %>$ <small>per day</small></h1>
+                      </div>
+                    </div>
+                  <% end %>
+              <%end%>
             <% end %>
           </div>
         </div>

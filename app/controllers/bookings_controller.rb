@@ -1,6 +1,8 @@
 class BookingsController < ApplicationController
   def index
     @bookings = policy_scope(Booking).order(created_at: :desc)
+    @creatures = policy_scope(Creature).order(created_at: :desc)
+    @creatures = Creature.where(user: current_user)
   end
 
   def show

@@ -1,25 +1,38 @@
 <div class="page">
   <div class="category my-4">
     <h2 class="ml-5">Book your experience with <%= @creature.name %></h2>
+
     <div class="two-columns-page">
+
       <div class="card-creature card-big">
         <%= image_tag @creature.profile_pic %>
         <h1><%= @creature.name %> the <%= @creature.species %></h1>
         <p><%= @creature.description %></p>
         <div class="card-bottom">
           <h1><%= @creature.rating %> ⭐️</h1>
-          <h1><%= @creature.price_per_day %>$ <small>per day</small></h1>
+          <h1><span id='creature_price'><%= @creature.price_per_day %></span>$ <small>per day</small></h1>
         </div>
       </div>
-      <div>
-        <% if policy(@booking).new? %>
-          <%= simple_form_for [@creature, @booking] do |f| %>
-            <%= f.input :start_date, label: 'When do you want to start your experience?', html5: true %>
-            <%= f.input :end_date, label: 'When do you want to end your experience?', html5: true %>
-            <%= f.submit "Book", class: 'btn btn-flat btn-sm'  %>
+
+      <div class="right-block">
+        <div>
+          <% if policy(@booking).new? %>
+            <%= simple_form_for [@creature, @booking] do |f| %>
+              <%= f.input :start_date, label: 'When do you want to start your experience?', html5: true %>
+              <%= f.input :end_date, label: 'When do you want to end your experience?', html5: true %>
+              <%= f.submit "Book", class: 'btn btn-flat btn-sm'  %>
+            <% end %>
           <% end %>
-        <% end %>
+        </div>
+
+        <div>
+          <h1>More about your experience</h1>
+          <p id="total_price"> </p>
+          <p id="duration"> </p>
+        </div>
+        </div>
       </div>
+
     </div>
   </div>
 </div>

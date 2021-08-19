@@ -5,6 +5,7 @@ class BookingsController < ApplicationController
 
   def show
     @creature = Creature.find(params[:id])
+    @booking = Booking.find(params[:id])
     authorize @booking
   end
 

@@ -19,3 +19,17 @@
   color: black;
   font-size: 17px;
 }
+
+.info-card {
+  width: 600px;
+  height: 320px;
+  border-radius: 7px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.1);
+  padding: 20px;
+  margin: 25px 0;
+}
+
+.info-card h2 {
+  font-size: 25px;
+  color: black;
+}

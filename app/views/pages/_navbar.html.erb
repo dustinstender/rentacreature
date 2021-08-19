@@ -1,5 +1,5 @@
 <% if user_signed_in? %>
-<div class="navbar navbar-inverse sticky-top navbar-light navbar-expand-sm navbar-lewagon navbar-fixed-top">
+<div class="navbar navbar-inverse navbar-trans sticky-top navbar-light navbar-expand-sm navbar-fixed-top">
     <%= link_to root_path, class: "navbar-brand" do %>
       <div class="logo-brand">
       <p class="p-logo"><%= image_tag "monster-logo.png" %> RentCreatures</p>
@@ -10,15 +10,11 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav mr-auto">
-        <li class="nav-item active">
-          <%= link_to "Creatures", creatures_index_path, class: "nav-link" %>
-        </li>
-        <li class="nav-item">
-          <%= link_to "Bookings", bookings_path, class: "nav-link" %>
-        </li>
         <li class="nav-item dropdown">
           <%= image_tag "https://res.cloudinary.com/creaturespic/image/upload/v1629294423/donald_trump_photo_michael_stewartwireimage_gettyimages-169093538jpg_x1iplw.jpg", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
           <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+            <%= link_to "Creatures", creatures_index_path, class: "dropdown-item"%>
+            <%= link_to "Bookings", bookings_path, class: "dropdown-item"%>
             <%= link_to "Edit Profile", edit_user_registration_path, class: "dropdown-item" %>
             <%= link_to "Log out", destroy_user_session_path, class: "dropdown-item", method: :delete %>
           </div>

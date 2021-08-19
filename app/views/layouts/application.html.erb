@@ -25,12 +25,10 @@
   </head>
 
   <body>
-    <% if current_page?(root_path) %>
-    <%= render "pages/navbar" %>
-    <% else %>
+    <div class="content-wrapper">
+    <% unless current_page?(root_path) %>
     <%= render "pages/navbar-nonhome" %>
     <% end %>
-    <div class="content-wrapper">
     <%= yield %>
     </div>
     <%= render "pages/footer" %>

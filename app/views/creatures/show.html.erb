@@ -1,5 +1,6 @@
 <div class="page">
   <div class="category my-4">
+
     <h2 class="ml-5">Book your experience with <%= @creature.name %></h2>
 
     <div class="two-columns-page">
@@ -15,6 +16,7 @@
       </div>
 
       <div class="right-block">
+
         <div>
           <% if policy(@booking).new? %>
             <%= simple_form_for [@creature, @booking] do |f| %>
@@ -25,12 +27,14 @@
           <% end %>
         </div>
 
+
         <div>
           <h1>More about your experience</h1>
           <p id="total_price"> </p>
           <p id="duration"> </p>
         </div>
         </div>
+
       </div>
 
     </div>

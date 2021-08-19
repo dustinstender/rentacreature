@@ -1,7 +1,18 @@
-.category h2 {
-  font-weight: bold;
-}
-
 .category a {
   width: 330px;
+}
+
+.category {
+  display: flex;
+  align-items: center;
+  position: relative;
+  flex-direction: column;
+  width: 95vw;
+  h2 {
+    font-weight: bold;
+  }
+}
+
+#dashboard {
+  width: 100%;
 }

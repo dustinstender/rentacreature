@@ -33,6 +33,7 @@
 .banner-bottom-div {
   margin-top: 15px;
   display: flex;
+  transition-duration: 0.2s;
 }
 
 *, *::before, *::after { box-sizing: border-box; }
@@ -46,7 +47,7 @@
   height: 70px;
 }
 
-.banner .form {
+.banner form {
   display: flex;
   flex-grow: 2;
   border-radius: 32px;
@@ -77,6 +78,10 @@
   font-size: 15px;
 }
 
+.banner-bottom-div:hover .search-button {
+  transform: rotate(180deg);
+  font-size: 45px;
+}
 
 .search-button {
   background-color: rgba(0,0,0,0);
@@ -91,12 +96,7 @@
   height: 67px;
   width: 67px;
   color: white;
-  transition-duration: 0.2s;
-  &:hover {
-    color: white;
-    transform: rotate(180deg);
-    font-size: 45px;
-  }
+  transition-duration: 0.3s;
 }
 
 

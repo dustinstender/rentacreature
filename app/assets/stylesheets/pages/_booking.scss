@@ -2,10 +2,11 @@
   overflow: hidden;
   height: 120px;
   background: white;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  box-shadow: 0 0 25px rgba(0,0,0,0.2);
   display: flex;
-  align-items: center;
+  justify-content: space-between;
   width: 600px;
+  border-radius: 7px;
 }
 
 .booking-cards {
@@ -13,7 +14,7 @@
 }
 
 .card-product img {
-  height: 100%;
+  height: 120px;
   width: 120px;
   object-fit: cover;
 }
@@ -32,8 +33,26 @@
   margin-top: 8px;
 }
 
-.card-product .card-product-infos {
+.card-product-infos {
   padding: 16px;
+  width: 400px;
+  flex-grow: 1;
+}
+
+.card-product-icons {
+  margin: 16px 16px 16px 0;
+  width: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  .booking-delete {
+    color: grey;
+    width: 20px;
+  }
+  .booking-edit {
+    color: grey;
+    width: 20px;
+  }
 }
 
 .btn-ghost {
@@ -48,29 +67,4 @@
 
 .btn-ghost:hover {
   opacity: 1;
-}
-
-.booking-delete {
-  margin-left: 455px;
-  margin-top: -53px;
-  color: grey;
-  position: absolute;
-}
-
-.booking-edit {
-  margin-left: 455px;
-  margin-top: 35px;
-  color: grey;
-  position: absolute;
-}
-
-.p-booking {
- position: absolute;
- margin-left: 120px;
-}
-
-.booking-total {
-  position: absolute;
-  margin-left: 430px;
-  margin-top: 90px;
 }

@@ -1,0 +1,3 @@
+<% if policy(Creature).create? %>
+  <%= link_to "New Creature", new_creature_path %>
+<% end %>

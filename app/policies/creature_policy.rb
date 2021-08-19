@@ -16,4 +16,13 @@ class CreaturePolicy < ApplicationPolicy
   def search_species?
     true
   end
+
+  def new?
+    true
+  end
+
+  def create?
+    record.user == user
+    true
+  end
 end

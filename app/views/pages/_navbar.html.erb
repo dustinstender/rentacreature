@@ -17,6 +17,7 @@
         <li class="nav-item dropdown">
           <%= image_tag "https://res.cloudinary.com/creaturespic/image/upload/v1629294423/donald_trump_photo_michael_stewartwireimage_gettyimages-169093538jpg_x1iplw.jpg", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
           <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+            <%=link_to "Create a Creature", new_creature_path, class: "dropdown-item"%>
             <%= link_to "Edit Profile", edit_user_registration_path, class: "dropdown-item" %>
             <%= link_to "Log out", destroy_user_session_path, class: "dropdown-item", method: :delete %>
           </div>

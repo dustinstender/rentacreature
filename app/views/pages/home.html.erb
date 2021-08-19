@@ -90,7 +90,7 @@
       <% @sample_creature.each do |creature| %>
         <%= link_to creature_path(creature) do %>
           <div class="card-creature">
-            <% if creature.profile_pic != nil %>
+            <% if creature.profile_pic.attached? %>
             <img src="<%= image_path(creature.profile_pic) %>")>
             <% else %>
                <%= image_tag "monster-logo.png" %>

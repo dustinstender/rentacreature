@@ -4,6 +4,7 @@
     <% @bookings.each do |booking| %>
     <div class="booking-cards">
         <div class="card-product">
+        <%if booking.creature.profile_pic.attached?%>
           <%= image_tag booking.creature.profile_pic %>
           <div class="card-product-infos">
             <h2><%= booking.creature.name %></h2>
@@ -11,10 +12,11 @@
             <% start = Date.parse(booking.start_date.to_s()); %>
             <p>You are staying for <%= (finish - start).to_i %> days.</p>
           </div>
+          <%end%>
           <%= link_to "Delete", bookings_path, method: :delete,
             data: { confirm: "Are you sure?" }, class: "btn btn-ghost booking-delete" %>
         </div>
-
+        
       </div>
     <% end %>
   </ul>

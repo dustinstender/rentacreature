@@ -11,3 +11,7 @@
 .ap-input-icon svg {
   display: none;
 }
+
+.content-wrapper {
+  min-height: calc(100vh - 70px - 80px);
+}

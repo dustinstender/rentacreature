@@ -15,16 +15,16 @@
                 <h1><%= creature.rating %> ⭐️</h1>
                 <h1><%= creature.price_per_day %>$ <small>per day</small></h1>
               </div>
-            </div>
+            <% end %>
           <% end %>
-        <% end %>
-      </div>
-      <div>
-        <div id="map"
-              class="my-4"
-              style="width: 600px; height: 600px;"
-              data-markers="<%= @markers.to_json %>"
-              data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"></div>
+        </div>
+        <div>
+          <div id="map"
+                class="my-4"
+                style="width: 600px; height: 90vh;"
+                data-markers="<%= @markers.to_json %>"
+                data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"></div>
+        </div>
       </div>
     </div>
   </div>

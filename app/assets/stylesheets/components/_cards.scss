@@ -12,7 +12,6 @@
   grid-gap: 50px;
   padding-top: 20px;
   padding-bottom: 20px;
-  margin-left: 40px;
 }
 
 .two-columns-cards {
@@ -21,6 +20,12 @@
   grid-gap: 10px;
   padding-top: 20px;
   padding-bottom: 20px;
+}
+
+.right-block {
+  display: block;
+  justify-content: center;
+  align-items: center;
 }
 
 .page-creature {

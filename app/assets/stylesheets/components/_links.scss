@@ -1,0 +1,14 @@
+.btn-link {
+  color: $monster-pink;
+  transition: 0.3s ease;
+  text-align: center;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.btn-link:hover {
+  color: $monster-pink;
+  font-weight: bold;
+  text-decoration: none;
+}

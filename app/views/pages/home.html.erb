@@ -4,49 +4,52 @@
 <div class="page">
 
   <div class="category my-4">
-    <h2 class="my-4">Discover new powers</h2>
-    <div class="cards">
-      <%= link_to creatures_search_path(power: "flying") do %>
-        <div class="card-power">
-          <%= image_tag "flying.jpg" %>
-          <div class="card-product-infos">
-            <h2>Fly</h2>
-            <p>Go abroad on the <strong>comfiest creatures</strong></p>
+    <div>
+      <h2 class="my-4">Discover new powers</h2>
+      <div class="cards">
+        <%= link_to creatures_search_path(power: "flying") do %>
+          <div class="card-power">
+            <%= image_tag "flying.jpg" %>
+            <div class="card-product-infos">
+              <h2>Fly</h2>
+              <p>Go abroad on the <strong>comfiest creatures</strong></p>
+            </div>
           </div>
-        </div>
-      <% end %>
-      <%= link_to creatures_search_path(power: "dark-power") do %>
-        <div class="card-power">
-          <%= image_tag "demon.jpg" %>
-          <div class="card-product-infos">
-            <h2>Dark powers</h2>
-            <p>Curse your <strong>worst enemy</strong> with the help of our demons</p>
+        <% end %>
+        <%= link_to creatures_search_path(power: "dark-power") do %>
+          <div class="card-power">
+            <%= image_tag "demon.jpg" %>
+            <div class="card-product-infos">
+              <h2>Dark powers</h2>
+              <p>Curse your <strong>worst enemy</strong> with the help of our demons</p>
+            </div>
           </div>
-        </div>
-      <% end %>
-      <%= link_to creatures_search_path(power: "good-luck") do %>
-        <div class="card-power">
-          <%= image_tag "magic.jpg" %>
-          <div class="card-product-infos">
-            <h2>Luck</h2>
-            <p>Get the <strong>best luck</strong> for your projects</p>
+        <% end %>
+        <%= link_to creatures_search_path(power: "good-luck") do %>
+          <div class="card-power">
+            <%= image_tag "magic.jpg" %>
+            <div class="card-product-infos">
+              <h2>Luck</h2>
+              <p>Get the <strong>best luck</strong> for your projects</p>
+            </div>
           </div>
-        </div>
-      <% end %>
-      <%= link_to creatures_search_path(power: "magic") do %>
-        <div class="card-power">
-          <%= image_tag "wizard.jpg" %>
-          <div class="card-product-infos">
-            <h2>Wichcraft</h2>
-            <p>Become <strong>Harry Potter </strong>for a day</p>
+        <% end %>
+        <%= link_to creatures_search_path(power: "magic") do %>
+          <div class="card-power">
+            <%= image_tag "wizard.jpg" %>
+            <div class="card-product-infos">
+              <h2>Wichcraft</h2>
+              <p>Become <strong>Harry Potter </strong>for a day</p>
+            </div>
           </div>
-        </div>
-      <% end %>
+        <% end %>
+      </div>
     </div>
   </div>
 
   <div class="category my-4">
-    <h2 class="my-4">Meet our friendliest creatures</h2>
+    <div>
+      <h2 class="my-4">Meet our friendliest creatures</h2>
       <div class="cards">
         <%= link_to creatures_shsp_path(species: "dragon") do %>
           <div class="card-type" style="background-image: url(<%= image_path('dragon.jpg') %>)">
@@ -69,16 +72,13 @@
           </div>
         <% end %>
       </div>
+    </div>
   </div>
 </div>
 
   <div class="big-card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= image_path('big-card.jpg') %>)">
     <h1 class="my-3">Book your next experience now</h1>
-    <% if !user_signed_in? %>
-    <button class="btn btn-light"><a href="users/sign_up">Sign up Now</a></button>
-    <% else %>
-    <button class="btn btn-light"><a href="users/sign_up">Book Now</a></button>
-    <% end %>
+    <button class="btn btn-index"><a href="/creatures/index">See all the creatures</a></button>
   </div>
 </div>
 
@@ -101,9 +101,9 @@
               <h1> <%= creature.rating %> ⭐️ </h1>
               <h1> <%= creature.price_per_day %> <small>per day</small></h1>
             </div>
-          </div>
+            <% end %>
           <% end %>
-        <% end %>
+      </div>
     </div>
   </div>
 </div>

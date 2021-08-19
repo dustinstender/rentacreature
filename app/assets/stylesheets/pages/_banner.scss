@@ -2,12 +2,11 @@
   background-size: cover;
   background-position: center;
   padding: 80px 0;
-  height: 600px;
+  height: 100vh;
 }
 
 .container-banner {
-  margin: auto 200px;
-  width: 600px;
+  margin: 15vh 200px;
 }
 
 .banner h1 {
@@ -33,6 +32,8 @@
 
 .banner-bottom-div {
   margin-top: 15px;
+  display: flex;
+  transition-duration: 0.2s;
 }
 
 *, *::before, *::after { box-sizing: border-box; }
@@ -40,66 +41,65 @@
 .product-search {
   display: flex;
   align-items: center;
-  background: white;
   border-radius: 5px;
   margin: 0 auto;
-  box-shadow: rgba(0,0,0,.172549) 0 6px 12px 0;
   cursor: pointer;
   height: 70px;
 }
 
-.search-element {
+.banner form {
   display: flex;
   flex-grow: 2;
-  flex-direction: column;
-  border-right: 1px solid rgba(10,10,10,.1);
+  border-radius: 32px;
   padding-left: 5px;
-  margin-left: 5px;
+  margin-right: 20px;
+  background-color: white;
+  opacity: 0.85;
+  height: 67px;
 }
 
 .search-label {
   font-weight: 700;
+  padding-left: 25px;
+  padding-top: 7px;
+  font-size: 15px;
+  line-height: 1.5em;
+
 }
 
-.search-input {
+#address-input {
   border: none;
   appearance: none;
   outline: none;
-  width: 100%;
-  font-size: 1.2em;
-  line-height: 1.2em;
-  margin-top: 5px;
+  width: 600px;
+  height: 60px;
+  background-color: rgba(0,0,0,0);
+  padding-left: 25px;
+  font-size: 15px;
 }
 
-.search-input:focus {
-  box-shadow: 0px 2px 0px 0px rgb(236,61,97);
+.banner-bottom-div:hover .search-button {
+  transform: rotate(180deg);
+  font-size: 45px;
 }
 
 .search-button {
+  background-color: rgba(0,0,0,0);
   display: flex;
-  flex-grow: 1;
-  height: 70px;
-  line-height: 80px;
-  padding: 0 2em;
   justify-content: center;
   align-items: center;
   text-align: center;
-  font-size: 1.2em;
-  font-weight: 100;
-  border: 0;
-  border-top-left-radius: 0px;
-  border-bottom-left-radius: 0px;
-  border-top-right-radius: 5px;
-  border-bottom-right-radius: 5px;
-  color: white;
+  border-radius: 50%;
+  border: none;
   background-color: rgb(236,61,97);
-  transition: background-color 0.8s ease;
+  font-size: 30px;
+  height: 67px;
+  width: 67px;
+  color: white;
+  transition-duration: 0.3s;
 }
 
-.search-button:hover {
-  background-color: HSLA(345, 100%, 60%, 1.00);
-  color: white;
-}
+
 
 @media (max-width:1000px){
         .container-banner {

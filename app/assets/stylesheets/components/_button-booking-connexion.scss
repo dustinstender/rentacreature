@@ -1,0 +1,17 @@
+.btn-flat {
+  color: white;
+  background-color: $monster-pink;
+  padding: 8px 30px;
+  border-radius: 4px;
+  transition: background 0.3s ease;
+  align-items: center;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 20px;
+}
+
+.btn-flat:hover {
+  color: $monster-pink;
+  background: linear-gradient(90deg, whitesmoke,rgba(245, 245, 245, 0.874));
+}

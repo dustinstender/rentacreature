@@ -1,6 +1,11 @@
 class CreaturesController < ApplicationController
   def index
     @creatures = policy_scope(Creature).order(created_at: :desc)
+    if params[:query].present?
+      @creatures = Creature.near(params[:query], 4)
+    else
+      @creatures = Creature.all
+    end
     map
   end
 

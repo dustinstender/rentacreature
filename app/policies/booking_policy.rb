@@ -13,6 +13,14 @@ class BookingPolicy < ApplicationPolicy
     record.creature.user != user
   end
 
+  def edit?
+    record.user == user
+  end
+
+  def update?
+    record.user == user
+  end
+
   def create?
     new?
   end

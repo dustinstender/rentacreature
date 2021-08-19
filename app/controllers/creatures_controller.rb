@@ -13,7 +13,6 @@ class CreaturesController < ApplicationController
     @creature = Creature.find(params[:id])
     @booking = Booking.new(creature: @creature)
     authorize @creature
-    map_one
   end
 
   def search
@@ -45,12 +44,6 @@ class CreaturesController < ApplicationController
   end
 
   def map_one
-    @markers = @creature.geocoded.map do |creature|
-      {
-        lat: creature.latitude,
-        lng: creature.longitude,
-        info_window: render_to_string(partial: "info_window", locals: { creature: creature })
-      }
-    end
+    @markers = @creature.search([@creature.latitude, @creature.longitude])
   end
 end

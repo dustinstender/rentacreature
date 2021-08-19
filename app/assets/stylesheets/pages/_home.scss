@@ -1,1 +1,13 @@
 // Specific CSS for your home-page
+.btn-index {
+  background-color: rgb(236,61,97);
+  border-radius: 32px;
+  padding: 10px 20px;
+  a {
+    color: white;
+  }
+}
+
+.ap-input-icon svg {
+  display: none;
+}

@@ -29,6 +29,7 @@ import "bootstrap";
 // internal imports
 import { initMapbox } from '../plugins/init_mapbox';
 import { initAutocomplete } from '../plugins/places';
+import { changeNav } from "../plugins/init_navbar";
 
 // Internal imports, e.g:
 // import { initSelect2 } from '../components/init_select2';
@@ -36,6 +37,7 @@ import { initAutocomplete } from '../plugins/places';
 document.addEventListener('turbolinks:load', () => {
   // Call your functions here, e.g:
   // initSelect2();
+  changeNav();
   initMapbox();
   initAutocomplete();
 });

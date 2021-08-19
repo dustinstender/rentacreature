@@ -1,10 +1,10 @@
 <% if user_signed_in? %>
-<div class="navbar navbar-inverse sticky-top navbar-light navbar-expand-sm navbar-lewagon navbar-fixed-top">
+<div class="navbar navbar-inverse sticky-top navbar-light navbar-expand-sm">
+    <div class="logo-brand">
     <%= link_to root_path, class: "navbar-brand" do %>
-      <div class="logo-brand">
-      <p class="p-logo"><%= image_tag "monster-logo.png" %> RentCreatures</p>
-      </div>
+      <p class="non-home-p"><%= image_tag "monster-logo.png" %> RentCreatures</p>
     <% end %>
+    </div>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>

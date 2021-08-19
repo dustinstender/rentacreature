@@ -1,6 +1,6 @@
 .navbar-lewagon {
   justify-content: space-between;
-  background: white;
+  color: white;
 }
 
 .navbar-lewagon .navbar-collapse {
@@ -9,4 +9,37 @@
 
 .navbar-lewagon .navbar-brand img {
   width: 40px;
+}
+
+.navbar-fixed-top.scrolled {
+  background-color: white !important;
+  transition: background-color 200ms linear;
+}
+
+.navbar {
+  color:white;
+}
+
+.navbar-trans {
+  background-color: rgba(255,255,255,0);
+}
+
+.logo-brand {
+  display: flex;
+   .p-logo {
+     color: white;
+     font-size: 22px;
+     margin-left: 5px;
+     opacity: 1;
+   }
+}
+
+.logo-brand {
+  display: flex;
+   .non-home-p {
+     color: black;
+     font-size: 22px;
+     margin-left: 5px;
+     opacity: 1;
+   }
 }

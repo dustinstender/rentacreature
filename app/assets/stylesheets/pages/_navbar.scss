@@ -16,10 +16,17 @@
   width: 40px;
 }
 
+.avatar {
+  width: 45px;
+  height: 45px;
+  margin-right: 10px;
+}
+
 .navbar-fixed-top.scrolled {
   background-color: white !important;
   transition: background-color 200ms linear;
   .logo-brand {
+  margin-left: 10px;
   padding-top: 10px;
   display: flex;
    .p-logo {
@@ -53,6 +60,7 @@
 .logo-brand {
   display: flex;
   padding-top: 10px;
+  margin-left: 10px;
    .p-logo {
      color: white;
      font-size: 22px;
@@ -64,6 +72,7 @@
 .logo-brand.scrolled {
   padding-top: 10px;
   display: flex;
+  margin-left: 10px;
    .p-logo.scrolled {
      color: black;
      font-size: 22px;
@@ -75,6 +84,7 @@
 .logo-brand {
   padding-top: 10px;
   display: flex;
+  margin-left: 10px;
    .non-home-p {
      color: black;
      font-size: 22px;

@@ -10,10 +10,10 @@ const computPrice = () => {
       const start_date_value = new Date(startDate.value)
       const diffDays = (end_date_value - start_date_value) / (1000 * 3600 * 24);
       const creaturePrice = parseInt(document.querySelector("#creature_price").innerHTML);
-      console.log(creaturePrice)
       const price = creaturePrice * diffDays
-      document.querySelector("#total_price").innerHTML = price
-      document.querySelector("#duration").innerHTML = diffDays
+      document.querySelector("#total_price").innerHTML = `Your experience will cost ${price} $.`
+      document.querySelector("#duration").innerHTML = `Your experience will last ${diffDays} days.`
+
     }
 
   }

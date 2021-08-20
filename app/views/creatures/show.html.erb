@@ -12,7 +12,7 @@
               <p style="opacity: 0;">.</p>
               <div class="bottom" style="display:flex; justify-content: space-between;">
                 <p><%= @creature.rating %> ⭐️</p>
-                <p><%= @creature.price_per_day %>$ <small>per day</small></p>
+                <p id="creature_price"><%= @creature.price_per_day %>$ <small>per day</small></p>
               </div>
             </div>
           </div>
@@ -33,10 +33,10 @@
             <% end %>
           </div>
           <div class="info-card">
-            <h2>Your booking infos</h2>
+            <h2 class="mb-4">Your booking infos</h2>
 
-            <p id="total_price"> $</p>
-            <p id="duration"> days</p>
+            <p id="total_price"></p>
+            <p id="duration"></p>
           </div>
         </div>
       </div>

@@ -31,6 +31,7 @@ import { initMapbox } from '../plugins/init_mapbox';
 import { initAutocomplete } from '../plugins/places';
 import { changeNav } from "../plugins/init_navbar";
 import { computPrice } from '../plugins/listener_date';
+import { initFlatpickr } from '../plugins/flatpickr'
 import { loadDynamicBannerText } from '../plugins/bannertext';
 
 
@@ -44,6 +45,7 @@ document.addEventListener('turbolinks:load', () => {
   initMapbox();
   initAutocomplete();
   computPrice();
+  initFlatpickr();
 });
 
 document.addEventListener('turbolinks:load', () => {

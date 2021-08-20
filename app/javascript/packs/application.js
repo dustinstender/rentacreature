@@ -32,6 +32,7 @@ import { initAutocomplete } from '../plugins/places';
 import { changeNav } from "../plugins/init_navbar";
 import { computPrice } from '../plugins/listener_date';
 import { initFlatpickr } from '../plugins/flatpickr'
+import { loadDynamicBannerText } from '../plugins/bannertext';
 
 
 // Internal imports, e.g:
@@ -45,4 +46,10 @@ document.addEventListener('turbolinks:load', () => {
   initAutocomplete();
   computPrice();
   initFlatpickr();
+});
+
+document.addEventListener('turbolinks:load', () => {
+  // Call your JS functions here
+  // [...]
+  loadDynamicBannerText();
 });

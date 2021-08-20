@@ -12,6 +12,7 @@ customer = User.create!(name:'Lea', description:"Hi I'm an customer", email:"cus
 puts "Creating creature..."
 
 power = ['good-luck', 'flying', 'dark-power', 'magic']
+
 creature_attributes = [
   { name: "Marly",
     species: "elf",
@@ -20,7 +21,7 @@ creature_attributes = [
     power: power.sample,
     rating: 4,
     profile_pic: 'https://res.cloudinary.com/creaturespic/image/upload/v1629382053/dark_elf_v1_v2_01.jpgB4284D90-C97C-478A-838C-FDEA10C5A918Large_azemmu_ublyub.jpg',
-    description: "I am the best creature ever existed in that world and really funny!",
+    description: "Hi I'm a super friendly creature and i'd be more than happy for spend time with you",
     price_per_day: 150.0,
     user: owner },
   { name: "Carole",
@@ -30,7 +31,7 @@ creature_attributes = [
     power: power.sample,
     rating: 3,
     profile_pic: "https://res.cloudinary.com/creaturespic/image/upload/v1629380483/unicorn-day-e1523293823642_nimztt_ww3ila.jpg",
-    description: "I am attractiv and understanble",
+    description: "Hi I'm a super friendly creature and i'd be more than happy for spend time with you",
     price_per_day: 150.5,
     user: owner },
   { name: "Dustin",
@@ -40,7 +41,7 @@ creature_attributes = [
     power: power.sample,
     rating: 2,
     profile_pic: "https://res.cloudinary.com/creaturespic/image/upload/v1629382067/deh94rs-e0a264b6-bdd4-446e-97eb-a825c5744d3c.jpg_lxul68_uxt9wr.jpg",
-    description: "I am stronger and sinister for every other creature",
+    description: "Hi I'm a super friendly creature and i'd be more than happy for spend time with you",
     price_per_day: 500.0,
     user: owner },
   { name: "Quentin",
@@ -50,7 +51,7 @@ creature_attributes = [
     power: power.sample,
     rating: 1,
     profile_pic: "https://res.cloudinary.com/creaturespic/image/upload/v1629382042/constantine-sekeris-img-1731_ztqght_i8yfyj.jpg",
-    description: "I am little and can speak all languages of the world",
+    description: "Hi I'm a super friendly creature and i'd be more than happy for spend time with you",
     price_per_day: 900.9,
     user: owner },
   { name: 'Thomas',

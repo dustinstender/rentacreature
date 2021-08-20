@@ -35,23 +35,30 @@
 
 .card-product-infos {
   padding: 16px;
-  width: 400px;
+  height: 125px;
+}
+
+.card-product a {
+  color: black;
   flex-grow: 1;
 }
 
 .card-product-icons {
   margin: 16px 16px 16px 0;
   width: 20px;
+  height: 120px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   .booking-delete {
     color: grey;
     width: 20px;
+    transition-duration: .2s;
   }
   .booking-edit {
     color: grey;
     width: 20px;
+    transition-duration: .2s;
   }
 }
 
@@ -67,4 +74,12 @@
 
 .btn-ghost:hover {
   opacity: 1;
+}
+
+.booking-delete:hover {
+  color: rgb(236,61,97);
+}
+
+.booking-edit:hover {
+  color: rgb(236,61,97);
 }

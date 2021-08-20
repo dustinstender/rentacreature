@@ -61,4 +61,7 @@ class CreaturesController < ApplicationController
     end
   end
 
+  def map_one
+    @markers = @creature.search([@creature.latitude, @creature.longitude])
+  end
 end

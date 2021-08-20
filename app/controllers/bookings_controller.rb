@@ -1,10 +1,14 @@
 class BookingsController < ApplicationController
   def index
     @bookings = policy_scope(Booking).order(created_at: :desc)
+    @bookings = Booking.where(user: current_user)
+    @creatures = policy_scope(Creature).order(created_at: :desc)
+    @creatures = Creature.where(user: current_user)
   end
 
   def show
     @creature = Creature.find(params[:id])
+    @booking = Booking.find(params[:id])
     authorize @booking
   end
 

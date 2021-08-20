@@ -6,21 +6,23 @@
         <% @creatures.each do |creature| %>
           <%= link_to creature_path(creature) do %>
             <div class="card-creature">
-              <%= image_tag creature.profile_pic %>
-              <h1><%= creature.name %> the <%= creature.species %></h1>
-              <p><%= creature.description %></p>
+              <%if creature.profile_pic.attached?%>
+                <%= image_tag creature.profile_pic %>
+                <h1><%= creature.name %> the <%= creature.species %></h1>
+                <p><%= creature.description %></p>
+              <%end%>
               <div class="card-bottom">
                 <h1><%= creature.rating %> ⭐️</h1>
                 <h1><%= creature.price_per_day %>$ <small>per day</small></h1>
               </div>
             </div>
-          <% end %>
+          <%end%>
         <% end %>
       </div>
       <div>
         <div id="map"
               class="my-4"
-              style="width: 600px; height: 600px;"
+              style="width: 600px; height: 90vh;"
               data-markers="<%= @markers.to_json %>"
               data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"></div>
       </div>

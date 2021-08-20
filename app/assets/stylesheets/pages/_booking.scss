@@ -2,10 +2,11 @@
   overflow: hidden;
   height: 120px;
   background: white;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  box-shadow: 0 0 25px rgba(0,0,0,0.2);
   display: flex;
-  align-items: center;
+  justify-content: space-between;
   width: 600px;
+  border-radius: 7px;
 }
 
 .booking-cards {
@@ -13,7 +14,7 @@
 }
 
 .card-product img {
-  height: 100%;
+  height: 120px;
   width: 120px;
   object-fit: cover;
 }
@@ -32,8 +33,33 @@
   margin-top: 8px;
 }
 
-.card-product .card-product-infos {
+.card-product-infos {
   padding: 16px;
+  height: 125px;
+}
+
+.card-product a {
+  color: black;
+  flex-grow: 1;
+}
+
+.card-product-icons {
+  margin: 16px 16px 16px 0;
+  width: 20px;
+  height: 120px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  .booking-delete {
+    color: grey;
+    width: 20px;
+    transition-duration: .2s;
+  }
+  .booking-edit {
+    color: grey;
+    width: 20px;
+    transition-duration: .2s;
+  }
 }
 
 .btn-ghost {
@@ -50,27 +76,10 @@
   opacity: 1;
 }
 
-.booking-delete {
-  margin-left: 455px;
-  margin-top: -53px;
-  color: grey;
-  position: absolute;
+.booking-delete:hover {
+  color: rgb(236,61,97);
 }
 
-.booking-edit {
-  margin-left: 455px;
-  margin-top: 35px;
-  color: grey;
-  position: absolute;
-}
-
-.p-booking {
- position: absolute;
- margin-left: 120px;
-}
-
-.booking-total {
-  position: absolute;
-  margin-left: 430px;
-  margin-top: 90px;
+.booking-edit:hover {
+  color: rgb(236,61,97);
 }

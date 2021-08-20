@@ -30,6 +30,8 @@ import "bootstrap";
 import { initMapbox } from '../plugins/init_mapbox';
 import { initAutocomplete } from '../plugins/places';
 import { changeNav } from "../plugins/init_navbar";
+import { computPrice } from '../plugins/listener_date'
+
 
 // Internal imports, e.g:
 // import { initSelect2 } from '../components/init_select2';
@@ -40,4 +42,5 @@ document.addEventListener('turbolinks:load', () => {
   changeNav();
   initMapbox();
   initAutocomplete();
+  computPrice();
 });

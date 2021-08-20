@@ -11,6 +11,11 @@ class CreaturesController < ApplicationController
 
   def show
     @creature = Creature.find(params[:id])
+    @markers = [{
+        lat: @creature.latitude,
+        lng: @creature.longitude,
+        info_window: render_to_string(partial: "info_window", locals: { creature: @creature })
+      }]
     @booking = Booking.new(creature: @creature)
     authorize @creature
   end
@@ -27,10 +32,28 @@ class CreaturesController < ApplicationController
     map
   end
 
+  def new
+    @user = current_user
+    @creature = Creature.new
+    authorize @creature
+  end
+
+  def create
+    @user = current_user
+    @creature = Creature.new(creature_params)
+    @creature.user = @user
+    if @creature.save
+      redirect_to bookings_path
+    else
+      render :new
+    end
+    authorize @creature
+  end
+
   private
 
   def creature_params
-    params.require(:creature).permit(:name, :type, :address, :power, :age, :photo, :description, :price_per_day)
+    params.require(:creature).permit(:name, :type, :address, :power, :age, :description, :price_per_day, :profile_pic)
   end
 
   def map
@@ -42,5 +65,4 @@ class CreaturesController < ApplicationController
       }
     end
   end
-
 end

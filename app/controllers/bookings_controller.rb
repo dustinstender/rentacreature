@@ -7,7 +7,7 @@ class BookingsController < ApplicationController
   end
 
   def show
-    @creature = Creature.find(params[:id])
+    @creature = Creature.find(params[:creature_id])
     @booking = Booking.find(params[:id])
     authorize @booking
   end
@@ -26,7 +26,7 @@ class BookingsController < ApplicationController
   def update
     @booking = Booking.find(params[:id])
     @booking.update(booking_params)
-    redirect_to booking_path(@booking)
+    redirect_to root_path
     authorize @booking
   end
 

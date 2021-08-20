@@ -1,6 +1,11 @@
 .navbar-lewagon {
   justify-content: space-between;
-  background: white;
+  color: white;
+}
+
+.navbar {
+  height: 65px;
+  align-items: center;
 }
 
 .navbar-lewagon .navbar-collapse {
@@ -9,4 +14,85 @@
 
 .navbar-lewagon .navbar-brand img {
   width: 40px;
+}
+
+.avatar {
+  width: 45px;
+  height: 45px;
+  margin-right: 10px;
+}
+
+.navbar-fixed-top.scrolled {
+  background-color: white !important;
+  transition: background-color 200ms linear;
+  .logo-brand {
+  margin-left: 10px;
+  padding-top: 10px;
+  display: flex;
+   .p-logo {
+     color: black;
+     font-size: 22px;
+     margin-left: 5px;
+     opacity: 1;
+   }
+  .nav-link {
+    color: black;
+  }
+}
+}
+
+.navbar-trans {
+  justify-content: space-between;
+  background-color: rgba(255,255,255,0);
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.navbar-trans .navbar-collapse {
+  flex-grow: 0;
+}
+
+.navbar-trans .navbar-brand img {
+  width: 40px;
+}
+
+.logo-brand {
+  display: flex;
+  padding-top: 10px;
+  margin-left: 10px;
+   .p-logo {
+     color: white;
+     font-size: 22px;
+     margin-left: 5px;
+     opacity: 1;
+   }
+}
+
+.logo-brand.scrolled {
+  padding-top: 10px;
+  display: flex;
+  margin-left: 10px;
+   .p-logo.scrolled {
+     color: black;
+     font-size: 22px;
+     margin-left: 5px;
+     opacity: 1;
+   }
+}
+
+.logo-brand {
+  padding-top: 10px;
+  display: flex;
+  margin-left: 10px;
+   .non-home-p {
+     color: black;
+     font-size: 22px;
+     margin-left: 5px;
+     opacity: 1;
+   }
+}
+
+.nav-link {
+  color: white;
 }

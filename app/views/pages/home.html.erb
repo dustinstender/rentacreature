@@ -1,3 +1,4 @@
+<%= render "pages/navbar" %>
 <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.unsplash.com/photo-1534447677768-be436bb09401?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1371&q=80);">
   <div class="container-banner">
     <div class="banner-top-div">
@@ -15,6 +16,52 @@
       </div>
           <%= submit_tag "✦", class: "search-button" %>
         <% end %>
+
+    </div>
+  </div>
+</div>
+
+<div class="page">
+
+  <div class="category my-4">
+    <h2 class="my-4">Discover new powers</h2>
+    <div class="cards">
+      <%= link_to creatures_search_path(power: "flying") do %>
+        <div class="card-power">
+          <%= image_tag "flying.jpg" %>
+          <div class="card-product-infos">
+            <h2>Fly</h2>
+            <p>Go abroad on the <strong>comfiest creatures</strong></p>
+          </div>
+        </div>
+      <% end %>
+      <%= link_to creatures_search_path(power: "dark-power") do %>
+        <div class="card-power">
+          <%= image_tag "demon.jpg" %>
+          <div class="card-product-infos">
+            <h2>Dark powers</h2>
+            <p>Curse your <strong>worst enemy</strong> with the help of our demons</p>
+          </div>
+        </div>
+      <% end %>
+      <%= link_to creatures_search_path(power: "good-luck") do %>
+        <div class="card-power">
+          <%= image_tag "magic.jpg" %>
+          <div class="card-product-infos">
+            <h2>Luck</h2>
+            <p>Get the <strong>best luck</strong> for your projects</p>
+          </div>
+        </div>
+      <% end %>
+      <%= link_to creatures_search_path(power: "magic") do %>
+        <div class="card-power">
+          <%= image_tag "wizard.jpg" %>
+          <div class="card-product-infos">
+            <h2>Wichcraft</h2>
+            <p>Become <strong>Harry Potter </strong>for a day</p>
+          </div>
+        </div>
+      <% end %>
     </div>
   </div>
 </div>

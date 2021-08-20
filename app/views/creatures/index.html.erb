@@ -14,34 +14,17 @@
               <div class="card-bottom">
                 <h1><%= creature.rating %> ⭐️</h1>
                 <h1><%= creature.price_per_day %>$ <small>per day</small></h1>
-
-    <div>
-      <h2>Browse our magical creatures</h2>
-      <div class="two-columns-page">
-        <div class="two-columns-cards">
-          <% @creatures.each do |creature| %>
-            <%= link_to creature_path(creature) do %>
-              <div class="card-creature">
-                <%if creature.profile_pic.attached?%>
-                <%= image_tag creature.profile_pic %>
-                <h1><%= creature.name %> the <%= creature.species %></h1>
-                <p><%= creature.description %></p>
-                <div class="card-bottom">
-                  <h1><%= creature.rating %> ⭐️</h1>
-                  <h1><%= creature.price_per_day %>$ <small>per day</small></h1>
-                </div>
               </div>
-             <%end%>
-            <% end %>
-          <% end %>
-        </div>
-        <div>
-          <div id="map"
-                class="my-4"
-                style="width: 600px; height: 90vh;"
-                data-markers="<%= @markers.to_json %>"
-                data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"></div>
-        </div>
+            </div>
+          <%end%>
+        <% end %>
+      </div>
+      <div>
+        <div id="map"
+              class="my-4"
+              style="width: 600px; height: 90vh;"
+              data-markers="<%= @markers.to_json %>"
+              data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"></div>
       </div>
     </div>
   </div>

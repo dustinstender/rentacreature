@@ -1,8 +1,25 @@
-
-<%= render "pages/banner" %>
-
+<%= render "pages/navbar" %>
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.unsplash.com/photo-1534447677768-be436bb09401?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1371&q=80);">
+  <div class="container-banner">
+    <div class="banner-top-div">
+      <h1>Do you <strong>believe</strong> in <strong>magic</strong>?</h1>
+      <p>Discover the real world of fanstasy.</p>
+    </div>
+    <div class="banner-bottom-div">
+      <div class="search-element">
+        <%= form_tag creatures_index_path, method: :get do %>
+          <%= text_field_tag :query,
+            params[:query],
+            id: "address-input",
+            placeholder: "Type your location here...."
+          %>
+      </div>
+          <%= submit_tag "✦", class: "search-button" %>
+        <% end %>
+    </div>
+  </div>
+</div>
 <div class="page">
-
   <div class="category my-4">
     <div>
       <h2 class="my-4">Discover new powers</h2>
@@ -46,62 +63,60 @@
       </div>
     </div>
   </div>
-
   <div class="category my-4">
     <div>
       <h2 class="my-4">Meet our friendliest creatures</h2>
-      <div class="cards">
-        <%= link_to creatures_shsp_path(species: "dragon") do %>
-          <div class="card-type" style="background-image: url(<%= image_path('dragon.jpg') %>)">
-            <h1>Dragons</h1>
-          </div>
-        <% end %>
-        <%= link_to creatures_shsp_path(species: "elf") do %>
-          <div class="card-type" style="background-image: url(<%= image_path('elf.jpg') %>)">
-            <h1>Elves</h1>
-          </div>
-        <% end %>
-        <%= link_to creatures_shsp_path(species: "demon") do %>
-          <div class="card-type" style="background-image: url(<%= image_path('evil.jpg') %>)">
-            <h1>Demons</h1>
-          </div>
-        <% end %>
-        <%= link_to creatures_shsp_path(species: "wizard") do %>
-          <div class="card-type" style="background-image: url(<%= image_path('wand.jpg') %>)">
-            <h1>Wizards & Witches</h1>
-          </div>
-        <% end %>
-      </div>
+        <div class="cards">
+          <%= link_to creatures_shsp_path(species: "dragon") do %>
+            <div class="card-type" style="background-image: url(<%= image_path('dragon.jpg') %>)">
+              <h1>Dragons</h1>
+            </div>
+          <% end %>
+          <%= link_to creatures_shsp_path(species: "elf") do %>
+            <div class="card-type" style="background-image: url(<%= image_path('elf.jpg') %>)">
+              <h1>Elves</h1>
+            </div>
+          <% end %>
+          <%= link_to creatures_shsp_path(species: "demon") do %>
+            <div class="card-type" style="background-image: url(<%= image_path('evil.jpg') %>)">
+              <h1>Demons</h1>
+            </div>
+          <% end %>
+          <%= link_to creatures_shsp_path(species: "wizard") do %>
+            <div class="card-type" style="background-image: url(<%= image_path('wand.jpg') %>)">
+              <h1>Wizards & Witches</h1>
+            </div>
+          <% end %>
+        </div>
+    </div>
+  </div>
+    <div class="big-card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= image_path('big-card.jpg') %>)">
+      <h1 class="my-3">Book your next experience now</h1>
+      <button class="btn btn-index"><a href="/creatures/index">See all the creatures</a></button>
     </div>
   </div>
 </div>
-
-  <div class="big-card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= image_path('big-card.jpg') %>)">
-    <h1 class="my-3">Book your next experience now</h1>
-    <button class="btn btn-index"><a href="/creatures/index">See all the creatures</a></button>
-  </div>
-</div>
-
-
 <div class="page">
   <div class="category my-4">
-    <h2 class="my-4">Our best recommandations now</h2>
-    <div class="cards">
-      <% @sample_creature.each do |creature| %>
-        <%= link_to creature_path(creature) do %>
-          <div class="card-creature">
-            <% if creature.profile_pic.attached? %>
-              <%= cl_image_tag creature.profile_pic.key%>
-              <h1> <%= creature.name %> the <%= creature.species %> </h1>
-              <p> <%= creature.description %> </p>
-            <div class="card-bottom">
-              <h1> <%= creature.rating %> ⭐️ </h1>
-              <h1> <%= creature.price_per_day %> <small>per day</small></h1>
+    <div>
+      <h2 class="my-4">Our best recommandations now</h2>
+      <div class="cards">
+        <% @sample_creature.each do |creature| %>
+          <%= link_to creature_path(creature) do %>
+            <div class="card-creature">
+              <% if creature.profile_pic != nil %>
+                <%= image_tag creature.profile_pic %>
+              <% else %>
+                <%= image_tag "monster-logo.png" %>
+              <% end %>
+                <h1> <%= creature.name %> the <%= creature.species %> </h1>
+                <p> <%= creature.description %> </p>
+              <div class="card-bottom">
+                <h1> <%= creature.rating %>⭐️</h1>
+                <h1> <%= creature.price_per_day %> <small>per day</small></h1>
+              </div>
             </div>
-            <% else %>
-               <%= image_tag "monster-logo.png" %>
             <% end %>
-            <%end%>
           <% end %>
       </div>
     </div>

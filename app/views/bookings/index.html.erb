@@ -13,22 +13,20 @@
                   <%= link_to 'add a creature', new_creature_path, class: "btn btn-flat btn-sm", :style=>'width: 210px;' %>
                 </div>
               <% else %>
-                <div class="two-columns-cards">
+                <div class="two-columns-cards" style="padding-top: 0;">
                     <% @creatures.each do |creature| %>
                         <% if creature.profile_pic.attached? %>
-                          <%= link_to creature_path(creature) do %>
-                            <div class="card-creature">
-                              <%= image_tag creature.profile_pic %>
-                              <h1><%= creature.name %></h1>
-                              <p><%= creature.description %></p>
-                              <div class="card-bottom">
-                                <%= link_to creature_path(creature), method: :delete, data: { confirm: "Are you sure?" } do %>
-                                  <i class="fas fa-trash booking-delete"></i>
-                                <% end %>
-                                <h1><%= creature.price_per_day %>$ <small>per day</small></h1>
-                              </div>
+                          <div class="card-creature">
+                            <%= image_tag creature.profile_pic %>
+                            <h1><%= creature.name %></h1>
+                            <p><%= creature.description %></p>
+                            <div class="card-bottom">
+                              <%= link_to creature_path(creature), :style=>'width: 50px; color: gray', method: :delete, data: { confirm: "Are you sure?" } do %>
+                                <i class="fas fa-trash booking-delete"></i>
+                              <% end %>
+                              <h1><%= creature.price_per_day %>$ <small>per day</small></h1>
                             </div>
-                          <% end %>
+                          </div>
                         <% end %>
                       <% end %>
                 </div>

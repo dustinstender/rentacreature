@@ -22,12 +22,11 @@ class CreaturePolicy < ApplicationPolicy
   end
 
   def create?
-    record.user == user
     true
   end
 
   def destroy?
-    record.user == user
+    true
   end
 
 end

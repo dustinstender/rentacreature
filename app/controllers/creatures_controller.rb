@@ -52,6 +52,7 @@ class CreaturesController < ApplicationController
 
   def destroy
     @creature = Creature.find(params[:id])
+    authorize @creature
     @creature.destroy
     redirect_to bookings_path
   end

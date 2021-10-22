@@ -1,1 +1,4 @@
-Rails app generated with [lewagon/rails-templates](https://github.com/lewagon/rails-templates), created by the [Le Wagon coding bootcamp](https://www.lewagon.com) team.
+# Rent A Creature
+https://rentacreature-dustinstender.herokuapp.com/
+![creatures](https://user-images.githubusercontent.com/60466088/132310791-e5fd2964-1067-4272-9190-6acd5498d348.png)
+
